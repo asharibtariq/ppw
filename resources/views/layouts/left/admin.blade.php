@@ -11,8 +11,9 @@ $user_menu = user_menu();
 <div class="list-group-item-action-main bg-navmenu"><img style="opacity: 0;" src="images/2.png" alt="logo"> Main Navigation</div>
 -->
 <a href="{{ url('home') }}" class="list-group-item-action-main"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
-<a href="javascript:;" data-toggle="collapse" data-target="#news-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> News <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div id="news-menu" class="collapse left-bar-main-collapse">
-    <a class="left-bar-submenu" href="{{ url('news') }}"><i class="fa fa-medkit" aria-hidden="true"></i> News</a>
-    <a class="left-bar-submenu" href="{{ url('add_news') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add News</a>
+<a href="{{ url('news') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> News <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="javascript:;" data-toggle="collapse" data-target="#events-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Events <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
+<div id="events-menu" class="collapse left-bar-main-collapse">
+    <a class="left-bar-submenu" href="{{ url('event') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Events</a>
+    <a class="left-bar-submenu" href="{{ url('add_event') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Event</a>
 </div>

@@ -49,3 +49,12 @@ Route::get('news/{id}', [\App\Http\Controllers\NewsController::class, 'show']);
 Route::get('edit_news/{id}', [\App\Http\Controllers\NewsController::class, 'edit']);
 Route::post('update_news/{id}', [\App\Http\Controllers\NewsController::class, 'update']);
 Route::get('delete_news/{id}', [\App\Http\Controllers\NewsController::class, 'destroy']);
+
+// Event Routes
+Route::get('event', [\App\Http\Controllers\EventController::class, 'index']);
+Route::get('add_event', [\App\Http\Controllers\EventController::class, 'create']);
+Route::post('add_event', [\App\Http\Controllers\EventController::class, 'store']);
+Route::get('event/{id}', [\App\Http\Controllers\EventController::class, 'show']);
+Route::get('edit_event/{id}', [\App\Http\Controllers\EventController::class, 'edit']);
+Route::post('update_event/{id}', [\App\Http\Controllers\EventController::class, 'update']);
+Route::get('delete_event/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
