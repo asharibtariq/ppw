@@ -121,60 +121,39 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
-                    <h2 class="title">Our Causes</h2>
-                    <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
+                    <h2 class="title">Latest News</h2>
+
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-1.jpg.pagespeed.ic.vrRgc_3PjI.jpg')}}" alt="">
+                            <img src="{{asset('img/news4.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 87%;">
-                                <span>87%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">Special Secretary Iftikhar Ali Shallwani
+                                called a meeting at the PPW Resource Centre</a></h3>
+                        <p>Meeting was held to discuss the current work done on Population. He called on the wing to get to the ground level of
+                            efforts by all stakeholders and gave some recommendations for a way forward @UNFPA.</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-2.jpg.pagespeed.ic.xh7_NMuawU.jpg')}}" alt="">
+                            <img src="{{asset('img/news7.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 53%;">
-                                <span>53%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
+
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Vix fuisset tibique facilisis cu. Justo accusata ius at</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">Tahir Mehmood Ashrafi ( All Pakistan Ulema Council of Pakistan) met with DG PPW</a></h3>
+                        <p>in the Population Program Wing of MNHSRC. Matters pertaining to the State and its policies regarding Family Planning were discussed. Tahir Mehmood Ashrafi said that Behbud-eAbadi important. #Ulema..</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -182,25 +161,15 @@
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-3.jpg.pagespeed.ic.THm-cPziJC.jpg')}}" alt="">
+                            <img src="{{asset('img/news3.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 72%;">
-                                <span>72%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
+
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">Ministry of NHSRC planned a meeting under the chairmanship of DG</a></h3>
+                        <p>with the stakeholders of the Medical Tourism Initiative, to discuss a way forward. Focal persons from the
+                            Ministry of Interior and Foreign Affairs along with the PTDC Director gave reports on the initiative.</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -211,25 +180,15 @@
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-4.jpg.pagespeed.ic.GCjGREkb1-.jpg')}}" alt="">
+                            <img src="{{asset('img/news1.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 64%;">
-                                <span>64%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
+
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">DG PPW met with Dr Mohammed Afifi</a></h3>
+                        <p> Regional Advisor on Women Health. Ms Ellen Thom, Team Lead for Healthier Population through the Life Course and
+                            Dr Qudsia Uzma, Technical Officer</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -239,25 +198,15 @@
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-5.jpg.pagespeed.ic.qvDU9cRyRX.jpg')}}" alt="">
+                            <img src="{{asset('img/news5.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 72%;">
-                                <span>72%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
+
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Vix fuisset tibique facilisis cu. Justo accusata ius at</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">Metting with Dr. Qibla Ayaz (CII)</a></h3>
+                        <p>DG Population Program Wing and team met with Dr. Qibla Ayaz (CII).
+                            for guidance and cooperation on holding Ulema conference. .</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -267,25 +216,14 @@
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/xpost-6.jpg.pagespeed.ic.EY1W5yetOp.jpg')}}" alt="">
+                            <img src="{{asset('img/news6.jpg')}}" alt="">
                         </a>
                     </div>
-                    <div class="causes-progress">
-                        <div class="causes-progress-bar">
-                            <div style="width: 53%;">
-                                <span>53%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="causes-raised">Raised: <strong>52.000$</strong></span>
-                            <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                        </div>
-                    </div>
+
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">Donate Now</a>
+                        <h3><a href="{{url('single_cause')}}">A meeting with PPW partners from HSA UNFPA</a></h3>
+                        <p>Where a presentaion was given on Midwifery in Pakistan and its plans of way forward. DG Dr. Sabina Durrani gave her suggestions and concerns. .</p>
+                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -295,15 +233,14 @@
 </div>
 
 <div id="cta" class="section">
-    <div class="section-bg" style="background-image:url(img/xbackground-1.jpg.pagespeed.ic.UbKyHbfmqD.jpg)" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url(img/npn.jpg)" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="cta-content text-center">
-                    <h1>Become A Volunteer</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#" class="primary-button">Join Us Now!</a>
+                    <h1 style="color: #1a1a1a">PPW</h1>
+                    <p style="color: #1a1a1a" class="lead">Working on Pakistan's National narrative : Rights, Responsibility & Balance (Tawazun).</p>
+                    <a href="#" class="primary-button">Visit Us Now!</a>
                 </div>
             </div>
         </div>
@@ -315,26 +252,25 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
-                    <h2 class="title">Upcoming Events</h2>
-                    <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
+                    <h2 class="title">Events</h2>
+
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="event">
                     <div class="event-img">
                         <a href="single-event.html">
-                            <img src="{{asset('img/xevent-1.jpg.pagespeed.ic.BUcs9mivQy.jpg')}}" alt="">
+                            <img src="{{asset('img/event1.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="single-event.html">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
-                        <ul class="event-meta">
+                        <h3><a href="single-event.html">Ministry of NHSRC
+                                in collaboration with the Council of Islamic Ideology arranged an Ulema Conference in Islamabad.
+                            </a></h3> <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>The conference was attended by a score of renowned religious scholars.
+                            The Minister of National Health Services was the Chief Guest at the Conference..</p>
                     </div>
                 </div>
             </div>
@@ -342,17 +278,17 @@
                 <div class="event">
                     <div class="event-img">
                         <a href="single-event.html">
-                            <img src="{{asset('img/xevent-2.jpg.pagespeed.ic.fO5U31Q42e.jpg')}}" alt="">
+                            <img src="{{asset('img/event2.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="single-event.html">Vix fuisset tibique facilisis cu. Justo accusata ius at</a></h3>
+                        <h3><a href="single-event.html">Population Wing arranged a Training session</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>Population Wing arranged a Training session for Public Private partnership of Doctors and Nurses on Post Partum Contraceptive use in ICT. DG met all participants and a healthy discussion on way forward
+                            @UNFPAPakistan
+                            .</p>
                     </div>
                 </div>
             </div>
@@ -361,17 +297,15 @@
                 <div class="event">
                     <div class="event-img">
                         <a href="single-event.html">
-                            <img src="{{asset('img/xevent-3.jpg.pagespeed.ic.kdOKZGl_DX.jpg')}}" alt="">
+                            <img src="{{asset('img/event3.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="single-event.html">Possit nostro aeterno eu vis, ut cum quem reque</a></h3>
+                        <h3><a href="single-event.html">MPDSR National Meeting</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>The event was graced by Iftikhar Shallwani  Special Secretary M/o MHSRC@Shallwani DG Sabina Durrani PPW, Dr Mohamed Afifi Regional Director , and health professionals from all provinces. Maternal mortality and ways to curtail its occurance was  discussed..</p>
                     </div>
                 </div>
             </div>
@@ -379,17 +313,17 @@
                 <div class="event">
                     <div class="event-img">
                         <a href="single-event.html">
-                            <img src="{{asset('img/xevent-4.jpg.pagespeed.ic.5T-WpGrW1J.jpg')}}" alt="">
+                            <img src="{{asset('img/event4.jpg')}}" alt="">
                         </a>
                     </div>
+
                     <div class="event-content">
-                        <h3><a href="single-event.html">Vix fuisset tibique facilisis cu. Justo accusata ius at</a></h3>
+                        <h3><a href="single-event.html">Health Services Academy & Accountability Group meeting</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p>Health Services Academy arranged a Technical Advisory & Accountability Group meeting On #MNCH and #FP. It was attended by DG PPW and other health Officials including Dr Jamil
+                            @UNFPA.</p>
                     </div>
                 </div>
             </div>
