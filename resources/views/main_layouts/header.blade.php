@@ -26,26 +26,12 @@
         <ul class="navbar-menu nav navbar-nav navbar-right">
             <li><a href="{{url('')}}">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li class="has-dropdown">
-                <a href="#causes">Causes</a>
-                <ul class="dropdown">
-                    <li><a href="{{url('single_cause')}}">Single Cause</a></li>
-                </ul>
-            </li>
-            <li class="has-dropdown">
+            <li><a href="#causes">News</a></li>
+            <li >
                 <a href="#events">Events</a>
-                <ul class="dropdown">
-                    <li><a href="{{url('single_event')}}">Single event</a></li>
-                </ul>
+
             </li>
-            <li class="has-dropdown">
-                <a href="#blog">Blog</a>
-                <ul class="dropdown">
-                    <li><a href="{{url('blog')}}">Blog Page</a></li>
-                    <li><a href="{{url('single_blog')}}">Single Blog</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
     </div>

@@ -339,16 +339,22 @@
     <div class="section-bg" style="background-image:url(img/background-2.jpg)" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title text-center">
+                    <h2 class="title">Our Team</h2>
+
+                </div>
+            </div>
             <div class="col-md-12">
                 <div id="testimonial-owl" class="owl-carousel owl-theme">
 
                     <div class="testimonial">
                         <div class="testimonial-meta">
                             <div class="testimonial-img">
-                                <img src="{{asset('img/xavatar-1.jpg.pagespeed.ic.RkR3XY-knB.jpg')}}" alt="">
+                                <img src="{{asset('img/dg1.jpg')}}" alt="">
                             </div>
-                            <h3>John Doe</h3>
-                            <span>Volunteer</span>
+                            <h3>DR. SABINA IMRAN DURRANI</h3>
+                            <span>DG POPULATION</span>
                         </div>
                         <div class="testimonial-quote">
                             <blockquote>
@@ -408,25 +414,31 @@
         </div>
     </div>
 </div>
-<div id="contact" class="article-reply">
+
+<div id="contact" class="article-reply" style="padding-bottom: 50px">
     <div class="container">
     <h3>Contact Us</h3>
     <p>Population Program Wing.</p>
     <form>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <input class="input" placeholder="Name" type="text">
+                    <input class="input" placeholder="First Name" type="text">
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input class="input" placeholder="Last Name" type="text">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input class="input" placeholder="PhoneNumber" type="text">
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <input class="input" placeholder="Email" type="email">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <input class="input" placeholder="Website" type="text">
                 </div>
             </div>
             <div class="col-md-12">
