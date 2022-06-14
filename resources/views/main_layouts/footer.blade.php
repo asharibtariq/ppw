@@ -87,9 +87,8 @@
                 <ul class="footer-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Causes</a></li>
+                    <li><a href="#">News</a></li>
                     <li><a href="#">Events</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
