@@ -268,6 +268,7 @@
                                 in collaboration with the Council of Islamic Ideology arranged an Ulema Conference in Islamabad.
                             </a></h3> <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
+                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
                         <p>The conference was attended by a score of renowned religious scholars.
                             The Minister of National Health Services was the Chief Guest at the Conference..</p>
@@ -285,6 +286,7 @@
                         <h3><a href="single-event.html">Population Wing arranged a Training session</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
+                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
                         <p>Population Wing arranged a Training session for Public Private partnership of Doctors and Nurses on Post Partum Contraceptive use in ICT. DG met all participants and a healthy discussion on way forward
                             @UNFPAPakistan
@@ -304,6 +306,7 @@
                         <h3><a href="single-event.html">MPDSR National Meeting</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
+                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
                         <p>The event was graced by Iftikhar Shallwani  Special Secretary M/o MHSRC@Shallwani DG Sabina Durrani PPW, Dr Mohamed Afifi Regional Director , and health professionals from all provinces. Maternal mortality and ways to curtail its occurance was  discussed..</p>
                     </div>
@@ -321,6 +324,7 @@
                         <h3><a href="single-event.html">Health Services Academy & Accountability Group meeting</a></h3>
                         <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
+                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
                         </ul>
                         <p>Health Services Academy arranged a Technical Advisory & Accountability Group meeting On #MNCH and #FP. It was attended by DG PPW and other health Officials including Dr Jamil
                             @UNFPA.</p>
@@ -405,81 +409,81 @@
     </div>
 </div>
 
-<div id="blog" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="section-title text-center">
-                    <h2 class="title">Our Blog</h2>
-                    <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="article">
-                    <div class="article-img">
-                        <a href="single-blog.html">
-                            <img src="{{asset('img/xpost-1.jpg.pagespeed.ic.vrRgc_3PjI.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title"><a href="single-blog.html">Possit nostro aeterno eu vis, ut cum quem
-                                reque</a></h3>
-                        <ul class="article-meta">
-                            <li>12 November 2018</li>
-                            <li>By John doe</li>
-                            <li>0 Comments</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
+{{--<div id="blog" class="section">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-8 col-md-offset-2">--}}
+                {{--<div class="section-title text-center">--}}
+                    {{--<h2 class="title">Our Blog</h2>--}}
+                    {{--<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor--}}
+                        {{--incididunt ut labore et dolore magna aliqua.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-4">--}}
+                {{--<div class="article">--}}
+                    {{--<div class="article-img">--}}
+                        {{--<a href="single-blog.html">--}}
+                            {{--<img src="{{asset('img/xpost-1.jpg.pagespeed.ic.vrRgc_3PjI.jpg')}}" alt="">--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="article-content">--}}
+                        {{--<h3 class="article-title"><a href="single-blog.html">Possit nostro aeterno eu vis, ut cum quem--}}
+                                {{--reque</a></h3>--}}
+                        {{--<ul class="article-meta">--}}
+                            {{--<li>12 November 2018</li>--}}
+                            {{--<li>By John doe</li>--}}
+                            {{--<li>0 Comments</li>--}}
+                        {{--</ul>--}}
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut--}}
+                            {{--labore et dolore magna aliqua.</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-md-4">
-                <div class="article">
-                    <div class="article-img">
-                        <a href="single-blog.html">
-                            <img src="{{asset('img/xpost-2.jpg.pagespeed.ic.xh7_NMuawU.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title"><a href="single-blog.html">Vix fuisset tibique facilisis cu. Justo
-                                accusata ius at</a></h3>
-                        <ul class="article-meta">
-                            <li>12 November 2018</li>
-                            <li>By John doe</li>
-                            <li>0 Comments</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="col-md-4">--}}
+                {{--<div class="article">--}}
+                    {{--<div class="article-img">--}}
+                        {{--<a href="single-blog.html">--}}
+                            {{--<img src="{{asset('img/xpost-2.jpg.pagespeed.ic.xh7_NMuawU.jpg')}}" alt="">--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="article-content">--}}
+                        {{--<h3 class="article-title"><a href="single-blog.html">Vix fuisset tibique facilisis cu. Justo--}}
+                                {{--accusata ius at</a></h3>--}}
+                        {{--<ul class="article-meta">--}}
+                            {{--<li>12 November 2018</li>--}}
+                            {{--<li>By John doe</li>--}}
+                            {{--<li>0 Comments</li>--}}
+                        {{--</ul>--}}
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut--}}
+                            {{--labore et dolore magna aliqua.</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-md-4">
-                <div class="article">
-                    <div class="article-img">
-                        <a href="single-blog.html">
-                            <img src="{{asset('img/xpost-3.jpg.pagespeed.ic.THm-cPziJC.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title"><a href="single-blog.html">Possit nostro aeterno eu vis, ut cum quem
-                                reque</a></h3>
-                        <ul class="article-meta">
-                            <li>12 November 2018</li>
-                            <li>By John doe</li>
-                            <li>0 Comments</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+            {{--<div class="col-md-4">--}}
+                {{--<div class="article">--}}
+                    {{--<div class="article-img">--}}
+                        {{--<a href="single-blog.html">--}}
+                            {{--<img src="{{asset('img/xpost-3.jpg.pagespeed.ic.THm-cPziJC.jpg')}}" alt="">--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                    {{--<div class="article-content">--}}
+                        {{--<h3 class="article-title"><a href="single-blog.html">Possit nostro aeterno eu vis, ut cum quem--}}
+                                {{--reque</a></h3>--}}
+                        {{--<ul class="article-meta">--}}
+                            {{--<li>12 November 2018</li>--}}
+                            {{--<li>By John doe</li>--}}
+                            {{--<li>0 Comments</li>--}}
+                        {{--</ul>--}}
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut--}}
+                            {{--labore et dolore magna aliqua.</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 <script>
     $(document).ready(function () {
