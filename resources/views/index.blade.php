@@ -351,7 +351,7 @@
                     <div class="testimonial">
                         <div class="testimonial-meta">
                             <div class="testimonial-img">
-                                <img src="{{asset('img/dg1.jpg')}}" alt="">
+                                <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
                             <span>DG POPULATION</span>
@@ -423,27 +423,27 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="input" placeholder="First Name" type="text">
+                    <input class="input" id="firstname" name="firstname" placeholder="First Name" type="text" required>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="input" placeholder="Last Name" type="text">
+                    <input class="input" id="lastname" name="lastname" placeholder="Last Name" type="text">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="input" placeholder="PhoneNumber" type="text">
+                    <input class="input" id="phonenumber" name="phonenumber" placeholder="Phone Number" type="text" required>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="input" placeholder="Email" type="email">
+                    <input class="input" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <textarea class="input" placeholder="Message"></textarea>
+                    <textarea class="input" id="message" name="message" placeholder="Message" required></textarea>
                 </div>
                 <button class="primary-button">Submit</button>
             </div>
