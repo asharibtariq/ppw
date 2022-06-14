@@ -408,7 +408,37 @@
         </div>
     </div>
 </div>
-
+<div id="contact" class="article-reply">
+    <div class="container">
+    <h3>Contact Us</h3>
+    <p>Population Program Wing.</p>
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="input" placeholder="Name" type="text">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="input" placeholder="Email" type="email">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="input" placeholder="Website" type="text">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <textarea class="input" placeholder="Message"></textarea>
+                </div>
+                <button class="primary-button">Submit</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
 {{--<div id="blog" class="section">--}}
     {{--<div class="container">--}}
         {{--<div class="row">--}}
