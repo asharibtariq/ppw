@@ -122,111 +122,44 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
                     <h2 class="title">Latest News</h2>
-
                 </div>
             </div>
+            @php
+                $news = json_decode($news)
+            @endphp
+            <?php
+            if (!empty($news)){
+            $i = 0;
+            foreach ($news as $news_row){
+            ?>
             <div class="col-md-4">
                 <div class="causes">
                     <div class="causes-img">
                         <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news4.jpg')}}" alt="">
+                            <img src="{{asset('uploads/news/'.$news_row->image)}}" alt="">
                         </a>
                     </div>
                     <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Special Secretary Iftikhar Ali Shallwani
-                                called a meeting at the PPW Resource Centre</a></h3>
-                        <p>Meeting was held to discuss the current work done on Population. He called on the wing to get to the ground level of
-                            efforts by all stakeholders and gave some recommendations for a way forward @UNFPA.</p>
+                        <h3>
+                            <a href="{{url('single_cause')}}">{{$news_row->title}}</a>
+                        </h3>
+                        <p>{{$news_row->description}}</p>
                         <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="causes">
-                    <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news7.jpg')}}" alt="">
-                        </a>
-                    </div>
-
-                    <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Tahir Mehmood Ashrafi ( All Pakistan Ulema Council of Pakistan) met with DG PPW</a></h3>
-                        <p>in the Population Program Wing of MNHSRC. Matters pertaining to the State and its policies regarding Family Planning were discussed. Tahir Mehmood Ashrafi said that Behbud-eAbadi important. #Ulema..</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="causes">
-                    <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news3.jpg')}}" alt="">
-                        </a>
-                    </div>
-
-                    <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Ministry of NHSRC planned a meeting under the chairmanship of DG</a></h3>
-                        <p>with the stakeholders of the Medical Tourism Initiative, to discuss a way forward. Focal persons from the
-                            Ministry of Interior and Foreign Affairs along with the PTDC Director gave reports on the initiative.</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
-                    </div>
-                </div>
-            </div>
-
+            <?php
+            $i++;
+            if ($i%3 == 0){
+            ?>
             <div class="clearfix visible-md visible-lg"></div>
-
-            <div class="col-md-4">
-                <div class="causes">
-                    <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news1.jpg')}}" alt="">
-                        </a>
-                    </div>
-
-                    <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">DG PPW met with Dr Mohammed Afifi</a></h3>
-                        <p> Regional Advisor on Women Health. Ms Ellen Thom, Team Lead for Healthier Population through the Life Course and
-                            Dr Qudsia Uzma, Technical Officer</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="causes">
-                    <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news5.jpg')}}" alt="">
-                        </a>
-                    </div>
-
-                    <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">Metting with Dr. Qibla Ayaz (CII)</a></h3>
-                        <p>DG Population Program Wing and team met with Dr. Qibla Ayaz (CII).
-                            for guidance and cooperation on holding Ulema conference. .</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="causes">
-                    <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
-                            <img src="{{asset('img/news6.jpg')}}" alt="">
-                        </a>
-                    </div>
-
-                    <div class="causes-content">
-                        <h3><a href="{{url('single_cause')}}">A meeting with PPW partners from HSA UNFPA</a></h3>
-                        <p>Where a presentaion was given on Midwifery in Pakistan and its plans of way forward. DG Dr. Sabina Durrani gave her suggestions and concerns. .</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
+            <?php
+            }
+            }
+            ?>
 
         </div>
     </div>
@@ -253,84 +186,48 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
                     <h2 class="title">Events</h2>
+                </div>
+            </div>
 
-                </div>
-            </div>
+            @php
+                $event = json_decode($event)
+            @endphp
+            <?php
+            if (!empty($event)){
+            $i = 0;
+            foreach ($event as $event_row){
+            ?>
+
             <div class="col-md-6">
                 <div class="event">
                     <div class="event-img">
-                        <a href="single-event.html">
-                            <img src="{{asset('img/event1.jpg')}}" alt="">
+                        <a href="{{url('single_event')}}">
+                            <img src="{{asset('uploads/event/'.$event_row->image)}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="single-event.html">Ministry of NHSRC
-                                in collaboration with the Council of Islamic Ideology arranged an Ulema Conference in Islamabad.
-                            </a></h3> <ul class="event-meta">
-                            <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
+                        <h3><a href="{{url('single_event')}}">{{$event_row->title}}</a></h3> <ul class="event-meta">
+                            <li><i class="fa fa-clock-o"></i> {{$event_row->date}}</li>
+                            <li><i class="fa fa-map-marker"></i> {{$event_row->location}}</li>
                         </ul>
-                        <p>The conference was attended by a score of renowned religious scholars.
-                            The Minister of National Health Services was the Chief Guest at the Conference..</p>
+                        <p>{{$event_row->description}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="event">
-                    <div class="event-img">
-                        <a href="single-event.html">
-                            <img src="{{asset('img/event2.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="single-event.html">Population Wing arranged a Training session</a></h3>
-                        <ul class="event-meta">
-                            <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
-                        </ul>
-                        <p>Population Wing arranged a Training session for Public Private partnership of Doctors and Nurses on Post Partum Contraceptive use in ICT. DG met all participants and a healthy discussion on way forward
-                            @UNFPAPakistan
-                            .</p>
-                    </div>
-                </div>
-            </div>
+
+            <?php
+            $i++;
+            if ($i%2 == 0){
+            ?>
             <div class="clearfix visible-md visible-lg"></div>
-            <div class="col-md-6">
-                <div class="event">
-                    <div class="event-img">
-                        <a href="single-event.html">
-                            <img src="{{asset('img/event3.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="single-event.html">MPDSR National Meeting</a></h3>
-                        <ul class="event-meta">
-                            <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
-                        </ul>
-                        <p>The event was graced by Iftikhar Shallwani  Special Secretary M/o MHSRC@Shallwani DG Sabina Durrani PPW, Dr Mohamed Afifi Regional Director , and health professionals from all provinces. Maternal mortality and ways to curtail its occurance was  discussed..</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="event">
-                    <div class="event-img">
-                        <a href="single-event.html">
-                            <img src="{{asset('img/event4.jpg')}}" alt="">
-                        </a>
-                    </div>
+            <?php
+            }
+            ?>
+            <?php
+            }
+            }
+            ?>
 
-                    <div class="event-content">
-                        <h3><a href="single-event.html">Health Services Academy & Accountability Group meeting</a></h3>
-                        <ul class="event-meta">
-                            <li><i class="fa fa-clock-o"></i> 24 October, 2018 | 8:00AM - 11:00PM</li>
-                            <li><i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road</li>
-                        </ul>
-                        <p>Health Services Academy arranged a Technical Advisory & Accountability Group meeting On #MNCH and #FP. It was attended by DG PPW and other health Officials including Dr Jamil
-                            @UNFPA.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

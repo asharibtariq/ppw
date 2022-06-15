@@ -4,21 +4,20 @@
             <div class="col-md-4">
                 <div class="footer">
                     <div class="footer-logo">
-                        <a class="logo" href="#">
-                            <img src="{{asset('img/xlogo.png.pagespeed.ic._El0UmxCY_.png')}}" alt="">
+                        <a class="logo" href="https://nhsrc.gov.pk/" target="_blank">
+                            <img src="{{asset('img/govt_logo.png')}}" alt="">
                         </a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
+                    <p>The Ministry of National Health Services, Regulation and Coordination is a cabinet level ministry of the government of Pakistan with responsibility for national public health.</p>
                     <ul class="footer-contact">
                         <li>
-                            <i class="fa fa-map-marker"></i> 2736 Hinkle Deegan Lake Road
+                            <i class="fa fa-map-marker"></i> 3rd Floor Kohsar Block, Secretariate
                         </li>
                         <li>
-                            <i class="fa fa-phone"></i> 607-279-9246
+                            <i class="fa fa-phone"></i> +92 51 9216280
                         </li>
                         <li>
-                            <i class="fa fa-envelope"></i> <a href="#"><span class="__cf_email__" data-cfemail="e8ab80899a819c91a88d85898184c68b8785">[email&#160;protected]</span></a>
+                            <i class="fa fa-envelope"></i> <a href="#"><span class="__cf_email__" data-cfemail="e8ab80899a819c91a88d85898184c68b8785">dg.tech@nhsrc.gov.pk</span></a>
                         </li>
                     </ul>
                 </div>
@@ -85,17 +84,17 @@
         <div id="footer-bottom" class="row">
             <div class="col-md-6 col-md-push-6">
                 <ul class="footer-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{url('')}}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#causes">News</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-md-pull-6">
                 <div class="footer-copyright">
                     <span>
-                        Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://nhsrc.gov.pk/" target="_blank">MoNHSRC</a>
                     </span>
                 </div>
             </div>
