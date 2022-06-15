@@ -22,3 +22,8 @@ $user_menu = user_menu();
     <a class="left-bar-submenu" href="{{ url('contact') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Contacts</a>
     <a class="left-bar-submenu" href="{{ url('add_contact') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Contact</a>
 </div>
+<a href="javascript:;" data-toggle="collapse" data-target="#teams-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Teams <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
+<div id="teams-menu" class="collapse left-bar-main-collapse">
+    <a class="left-bar-submenu" href="{{ url('team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Teams</a>
+    <a class="left-bar-submenu" href="{{ url('add_team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Teams</a>
+</div>

@@ -84,9 +84,16 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(ContactRequest $request, $id)
     {
-        //
+        $userId = Auth::id();
+        $contact = Contact::findOrFail($id);
+        $updateData = $request->all();
+        //    $updateData['slug'] = strtolower(str_replace(' ','_',$updateData['title']));
+        $updateData['updated_by'] = $userId;
+        //    pre($request->all(),1);
+        $contact->update($updateData);
+        return redirect('contact')->with('success', 'Contact Updated Successfully');
     }
 
     /**
@@ -95,8 +102,11 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        File::delete($contact->image);
+        $contact->delete();
+        return redirect('contact')->with('success', 'Contact Successfully Deleted');
     }
 }

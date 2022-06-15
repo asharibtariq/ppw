@@ -71,6 +71,33 @@ class AjaxController extends Controller{
                 $data['links'] = $news;
                 return view('adminpanel.event.event_list')->with($data);
                 break;
+            case 'team_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_event.title'] = $title;
+                */
+                $team = DB::table('tbl_team')
+                    ->select('tbl_team.id',
+                        'tbl_team.name',
+                        'tbl_team.designation',
+                        'tbl_team.image',
+                        'tbl_event.department',
+                        'tbl_team.description',
+                        'tbl_team.status',
+                        'tbl_team.created_at',
+                        'tbl_team.updated_at')
+                    ->where('name', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_team.id')
+                    ->orderBy('tbl_team.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $team->items();
+                $data['links'] = $team;
+                return view('adminpanel.team.team_list')->with($data);
+                break;
             case 'contact_content':
                 $where = array();
                 $title = $request->title != '' ? $request->title : '';
@@ -89,7 +116,7 @@ class AjaxController extends Controller{
                         'tbl_contact.status',
                         'tbl_contact.created_at',
                         'tbl_contact.updated_at')
-                    ->where('title', 'LIKE', '%' . $title . '%')
+                    ->where('firstname', 'LIKE', '%' . $title . '%')
                 //    ->groupBy('tbl_contact.id')
                     ->orderBy('tbl_contact.id', 'DESC')
                     ->paginate($per_page);

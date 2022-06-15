@@ -67,3 +67,12 @@ Route::get('contact/{id}', [\App\Http\Controllers\ContactController::class, 'sho
 Route::get('edit_contact/{id}', [\App\Http\Controllers\ContactController::class, 'edit']);
 Route::post('update_contact/{id}', [\App\Http\Controllers\ContactController::class, 'update']);
 Route::get('delete_contact/{id}', [\App\Http\Controllers\ContactController::class, 'destroy']);
+
+// Event Teams
+Route::get('team', [\App\Http\Controllers\TeamController::class, 'index']);
+Route::get('add_team', [\App\Http\Controllers\TeamController::class, 'create']);
+Route::post('add_team', [\App\Http\Controllers\TeamController::class, 'store']);
+Route::get('team/{id}', [\App\Http\Controllers\TeamController::class, 'show']);
+Route::get('edit_team/{id}', [\App\Http\Controllers\TeamController::class, 'edit']);
+Route::post('update_team/{id}', [\App\Http\Controllers\TeamController::class, 'update']);
+Route::get('delete_team/{id}', [\App\Http\Controllers\TeamController::class, 'destroy']);
