@@ -92,3 +92,6 @@ Route::get('task_force', function () {
 Route::get('pakistan_population_fund', function () {
     return view('pages/pakistan_population_fund');
 });
+Route::get('about', function () {
+    return view('pages/about');
+});

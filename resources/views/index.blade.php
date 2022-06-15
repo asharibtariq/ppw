@@ -68,7 +68,7 @@
                 </div>
                 <div class="about-content">
                     <p>Although Pakistan has one of the oldest family planning programmes in the region yet, strategic disconnects between informed population policies and planning, and socio-economic development has resulted in limited progress not only towards lowering the fertility rates, but also in improving the contraceptive prevalence rates, resulting in a sluggish demographic transition.</p>
-                    <a href="#" class="primary-button">Read More</a>
+                    <a href="{{url("about")}}" class="primary-button">Read More</a>
                 </div>
             </div>
             <div class="col-md-offset-1 col-md-6">

@@ -32,7 +32,7 @@
                             <hr>
                             <p>Accordingly, the recommendations were placed before CCI on 19th November 2018 in its 40th meeting. The CCI approved all the recommendations in principle and asked the Ministry of NHSR&C to prepare an Action Plan with financial modalities for operationalization of the recommendations in consultation with all relevant stakeholders. These recommendations are aimed at accelerating the efforts of the Government to reduce Population Growth Rate (PGR), lower Total Fertility Rate (TFR) and increase Contraceptive Prevalence Rate (CPR), and focus on the following areas:
                             </p>
-                              <h5 >  i. Establish National & Provincial Task Forces <br>
+                              <p >  i. Establish National & Provincial Task Forces <br>
 
                                 ii. Ensure Universal Access to FP/RH Services <br>
 
@@ -47,7 +47,7 @@
                                 vii. Ensure Contraceptives Commodity Security and strengthen Supply Chain Management System
                                   <br>
                                 viii. Seek Support of Ulema: Training courses on FP for Ulema and Khateebs.
-                              </h5>
+                              </p>
                         </div>
 
 
