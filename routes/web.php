@@ -77,3 +77,18 @@ Route::get('team/{id}', [\App\Http\Controllers\TeamController::class, 'show']);
 Route::get('edit_team/{id}', [\App\Http\Controllers\TeamController::class, 'edit']);
 Route::post('update_team/{id}', [\App\Http\Controllers\TeamController::class, 'update']);
 Route::get('delete_team/{id}', [\App\Http\Controllers\TeamController::class, 'destroy']);
+
+// Static Pages
+
+Route::get('national_action_plan', function () {
+    return view('pages/national_action_plan');
+});
+Route::get('cci_recommendation', function () {
+    return view('pages/cci_recommendation');
+});
+Route::get('task_force', function () {
+    return view('pages/task_force');
+});
+Route::get('pakistan_population_fund', function () {
+    return view('pages/pakistan_population_fund');
+});
