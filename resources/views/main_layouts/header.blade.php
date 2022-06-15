@@ -40,6 +40,15 @@
                     <li><a href="#">Population Fund</a></li>
                 </ul>
             </li>
+            <li class="has-dropdown"><a href="#">Media Centre</a>
+                <ul class="dropdown">
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Social Media Links</a></li>
+                    <li><a href="#">News Letter</a></li>
+                    <li><a href="#">Picture Gallery</a></li>
+                    <li><a href="#">Videos</a></li>
+                </ul>
+            </li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
