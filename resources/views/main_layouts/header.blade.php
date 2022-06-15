@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <div class="navbar-brand">
                 <a class="logo" href="{{url('')}}">
-                    <img src="{{asset('img/xlogo.png.pagespeed.ic._El0UmxCY_.png')}}" alt="logo">
+                    <img src="{{asset('img/govt_logo.png')}}" alt="logo"> <span>Population Program Wing</span>
                 </a>
             </div>
             <button class="navbar-toggle-btn">
@@ -27,9 +27,18 @@
             <li><a href="{{url('')}}">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#causes">News</a></li>
-            <li >
-                <a href="#events">Events</a>
-
+            <li ><a href="#events">Events</a></li>
+            <li class="has-dropdown"><a href="#">NAP</a>
+                <ul class="dropdown">
+                    <li><a href="#">The Context</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">CCI Recommendations</a></li>
+                    <li><a href="#">CCI Portal</a></li>
+                    <li><a href="#">Task Force</a></li>
+                    <li><a href="#">Meetings FTF</a></li>
+                    <li><a href="#">NAP Progress</a></li>
+                    <li><a href="#">Population Fund</a></li>
+                </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
         </ul>

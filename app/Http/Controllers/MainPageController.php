@@ -14,7 +14,7 @@ class MainPageController extends Controller{
 
     public function index(){
         $data['result'] = array();
-        $data['news'] = News::all()->where('status','=','Y');
+        $data['news'] = News::all()->sortByDesc('id')->where('status','=','Y');
         $data['event'] = Event::all()->where('status','=','Y');
         return view('index', $data)->with('title', 'PPW Home');
     }

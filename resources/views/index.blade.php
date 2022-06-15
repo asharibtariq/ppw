@@ -171,8 +171,8 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="cta-content text-center">
-                    <h1 style="color: #1a1a1a">PPW</h1>
-                    <p style="color: #1a1a1a" class="lead">Working on Pakistan's National narrative : Rights, Responsibility & Balance (Tawazun).</p>
+                    <h1 style="color: white">PPW</h1>
+                    <p style="color: white" class="lead">Working on Pakistan's National narrative : Rights, Responsibility & Balance (Tawazun).</p>
                     <a href="#" class="primary-button">Visit Us Now!</a>
                 </div>
             </div>
@@ -228,6 +228,33 @@
             }
             ?>
 
+        </div>
+    </div>
+</div>
+
+<div id="population_day" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title text-center">
+                    <h2 class="title">World Population Day 11th July 2021</h2>
+                    <p style="color: black !important;"><i>World Population Day is Celebrated on 11th July of every year</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <img src="{{asset('img/pp_analysis_thumb.jpg')}}" />
+            </div>
+            <div class="col-md-8 col-sm-6 col-xs-12" style="margin-top: 2%;">
+                <span class=""></span>
+                <ul class="list-group" style="color: black !important;">
+                    <li class="list-group-item"><img src="{{asset('img/tick.png')}}" width="15" /> Pakistan is the world's 5th most populous country, with the population of over 220 million</li>
+                    <li class="list-group-item"><img src="{{asset('img/tick.png')}}" width="15" /> Pakistan has the highest population growth rate among SAARC countries at 2.4 percent which means an addition of over 3 million people every year.</li>
+                    <li class="list-group-item"><img src="{{asset('img/tick.png')}}" width="15" /> Theme of this year's World Population Day is 'Rights &amp; Choices are the Answer; Whether baby boom or bust, the solution lies in prioritizing the reproductive health and rights of all people'</li>
+                </ul>
+                <span style="color: black !important;">National narrative of Pakistan on population states; "Parents have the right to freely and responsibly decide the number and spacing of their children to fulfill the fundamental rights of their children and family by maintaining a Balance/ Tawazun between their family size and resources. The Government and society have the responsibility to facilitate parents to achieve this balance by providing universal access to family planning information and services, thereby achieving sustainable development."</span>
+            </div>
         </div>
     </div>
 </div>
