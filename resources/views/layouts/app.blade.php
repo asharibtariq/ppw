@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}" />{{--Important for ajax request--}}
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}"/>
-    <title>Healthcare Destination | {{ isset($title) ? $title : '' }} </title>
+    <title>PPW | {{ isset($title) ? $title : '' }} </title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin-style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
