@@ -2,7 +2,7 @@
 @section('main_content')
 
 <div id="page-header">
-    <div class="section-bg" style="background-image:url(img/background-2.jpg)"></div>
+    <div class="section-bg" style="background-image:url({{asset('img/background-2.jpg')}})"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">

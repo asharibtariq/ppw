@@ -20,6 +20,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
+Route::get('single_cause/{id}', [\App\Http\Controllers\MainPageController::class, 'single_cause']);
 
 Route::get('blog', function () {
     return view('blog');

@@ -5,7 +5,7 @@
     <div id="home-owl" class="owl-carousel owl-theme">
 
         <div class="home-item">
-            <div class="section-bg" style="background-image:url(img/main_page_img_01.jpg)"></div>
+            <div class="section-bg" style="background-image:url({{asset('img/main_page_img_01.jpg')}})"></div>
             <div class="home">
                 <div class="container">
                     <div class="row">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="home-item">
-            <div class="section-bg" style="background-image:url(img/main_page_img_02.jpg)"></div>
+            <div class="section-bg" style="background-image:url({{asset('img/main_page_img_02.jpg')}})"></div>
             <div class="home">
                 <div class="container">
                     <div class="row">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="home-item">
-            <div class="section-bg" style="background-image:url(img/main_page_img_03.jpg)"></div>
+            <div class="section-bg" style="background-image:url({{asset('img/main_page_img_03.jpg')}})"></div>
             <div class="home">
                 <div class="container">
                     <div class="row">
@@ -135,7 +135,7 @@
             <div class="col-md-4">
                 <div class="causes">
                     <div class="causes-img">
-                        <a href="{{url('single_cause')}}">
+                        <a href="{{url('single_cause', $news_row->id)}}">
                             <img src="{{asset('uploads/news/'.$news_row->image)}}" alt="">
                         </a>
                     </div>
@@ -166,7 +166,7 @@
 </div>
 
 <div id="cta" class="section">
-    <div class="section-bg" style="background-image:url(img/npn.jpg)" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url({{asset('img/npn.jpg')}})" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -260,7 +260,7 @@
 </div>
 
 <div id="testimonial" class="section">
-    <div class="section-bg" style="background-image:url(img/background-2.jpg)" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url({{asset('img/background-2.jpg')}})" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
