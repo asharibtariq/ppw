@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Contacts";
+        return view('adminpanel.contact.contact')->with('title', $title);
     }
 
     /**
@@ -25,7 +30,8 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Add Contact";
+        return view('adminpanel.contact.add_contact')->with('title', $title);
     }
 
     /**
@@ -34,9 +40,16 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
-        //
+        $userId = Auth::id();
+        $insertData = $request->all();
+        //    $insertData['slug'] = strtolower(str_replace(' ','_',$insertData['title']));
+        $insertData['created_by'] = $userId;
+        $insertData['updated_by'] = $userId;
+        //    pre($request->all(),1);
+        Contact::create($insertData);
+        return redirect('contact')->with('success', 'Contact Added Successfully');
     }
 
     /**
@@ -56,9 +69,12 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit($id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        $title = "Edit Contact";
+        $data['contact'] = $contact;
+        return view('adminpanel.contact.edit_contact', $data)->with('title', $title);
     }
 
     /**

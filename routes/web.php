@@ -58,3 +58,12 @@ Route::get('event/{id}', [\App\Http\Controllers\EventController::class, 'show'])
 Route::get('edit_event/{id}', [\App\Http\Controllers\EventController::class, 'edit']);
 Route::post('update_event/{id}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('delete_event/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
+
+// Event Contacts
+Route::get('contact', [\App\Http\Controllers\ContactController::class, 'index']);
+Route::get('add_contact', [\App\Http\Controllers\ContactController::class, 'create']);
+Route::post('add_contact', [\App\Http\Controllers\ContactController::class, 'store']);
+Route::get('contact/{id}', [\App\Http\Controllers\ContactController::class, 'show']);
+Route::get('edit_contact/{id}', [\App\Http\Controllers\ContactController::class, 'edit']);
+Route::post('update_contact/{id}', [\App\Http\Controllers\ContactController::class, 'update']);
+Route::get('delete_contact/{id}', [\App\Http\Controllers\ContactController::class, 'destroy']);

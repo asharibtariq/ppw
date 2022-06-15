@@ -71,6 +71,33 @@ class AjaxController extends Controller{
                 $data['links'] = $news;
                 return view('adminpanel.event.event_list')->with($data);
                 break;
+            case 'contact_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_event.title'] = $title;
+                */
+                $contact = DB::table('tbl_contact')
+                    ->select('tbl_contact.id',
+                        'tbl_contact.firstname',
+                        'tbl_contact.lastname',
+                        'tbl_contact.email',
+                        'tbl_contact.phonenumber',
+                        'tbl_contact.message',
+                        'tbl_contact.status',
+                        'tbl_contact.created_at',
+                        'tbl_contact.updated_at')
+                    ->where('title', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_contact.id')
+                    ->orderBy('tbl_contact.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $contact->items();
+                $data['links'] = $contact;
+                return view('adminpanel.contact.contact_list')->with($data);
+                break;
             default:
                 break;
         }

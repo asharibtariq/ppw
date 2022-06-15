@@ -79,7 +79,7 @@ class EventController extends Controller{
     public function edit($id){
         $event = Event::findOrFail($id);
         $title = "Edit Event";
-        $data['news'] = $event;
+        $data['event'] = $event;
         return view('adminpanel.event.edit_event', $data)->with('title', $title);
     }
 

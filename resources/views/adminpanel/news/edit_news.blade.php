@@ -101,44 +101,5 @@
             </div>
         </div>
     </div>
-    <script>
 
-        $(document).ready(function () {
-            $(document).on("change", "#district_id", function () {
-                var district = $("#district_id option:selected").text();
-                $("#district").val(district);
-            });
-
-            $(document).on("change", "#province_id", function () {
-                var name = 'district_id';
-                var id = 'div_district';
-                var selected = 0;
-                var province_id = $(this).val();
-                var province = $("#province_id option:selected").text();
-                $("#province").val(province);
-                getDistrict(id, selected, name, province_id);
-            });
-        });
-
-        function getDistrict(tr_id, selected, name, province_id) {
-            var postData = {
-                "_token": "{{ csrf_token() }}",
-                "province_id": province_id,
-                "default": selected,
-                "name": name
-            };
-            $.ajax({
-                url: 'ajax/get_district',
-                type: 'POST',
-                data: postData,
-                success: function (data) {
-                    id = "#" + tr_id;
-                    $("#" + tr_id).show();
-                    $("#" + tr_id).html(data);
-                    $(".select2").select2({theme: "default"});
-                }
-            });
-        }
-
-    </script>
 @endsection

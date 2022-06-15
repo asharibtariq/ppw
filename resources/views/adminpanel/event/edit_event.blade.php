@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Edit News</h4>
+                        <h4>Edit Event</h4>
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -16,7 +16,7 @@
                             @endforeach
                         @endif
 
-                        <form method="post" action="{{url('update_news', $news->id)}}" enctype="multipart/form-data">
+                        <form method="post" action="{{url('update_event', $event->id)}}" enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             {{--<input type="hidden" name="_method" value="PUT">--}}
                             <div class="row">
@@ -29,7 +29,7 @@
                                                class="form-control input-paf only_alpha"
                                                placeholder="Author"
                                                minlength="3"
-                                               value="{{ $news->author }}"
+                                               value="{{ $event->author }}"
                                                required />
                                         @if ($errors->has('author'))
                                             <span class="text-danger">{{ $errors->first('author') }}</span>
@@ -43,7 +43,7 @@
                                                name="title"
                                                id="title"
                                                class="form-control input-paf"
-                                               value="{{ $news->title }}"
+                                               value="{{ $event->title }}"
                                                placeholder="Title" />
                                         @if ($errors->has('title'))
                                             <span class="text-danger">{{ $errors->first('title') }}</span>
@@ -53,8 +53,8 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="label-paf" for="image">
-                                            @if ($news->image != '')
-                                                <img src="{{asset('uploads/news/'.$news->image)}}" width="50" />
+                                            @if ($event->image != '')
+                                                <img src="{{asset('uploads/event/'.$event->image)}}" width="50" />
                                             @else
                                                 Image
                                             @endif
@@ -72,7 +72,7 @@
                                                name="location"
                                                id="location"
                                                class="form-control input-paf"
-                                               value="{{ $news->location }}"
+                                               value="{{ $event->location }}"
                                                placeholder="Location" />
                                         @if ($errors->has('location'))
                                             <span class="text-danger">{{ $errors->first('location') }}</span>
@@ -86,7 +86,7 @@
                                                name="date"
                                                id="date"
                                                class="form-control input-paf"
-                                               value="{{ $news->date }}"
+                                               value="{{ $event->date }}"
                                                placeholder="Date" />
                                         @if ($errors->has('date'))
                                             <span class="text-danger">{{ $errors->first('date') }}</span>
@@ -99,7 +99,7 @@
                                         <textarea name="description"
                                                   id="description"
                                                   class="form-control input-paf"
-                                                  placeholder="Description">{{ $news->description }}</textarea>
+                                                  placeholder="Description">{{ $event->description }}</textarea>
                                         @if ($errors->has('description'))
                                             <span class="text-danger">{{ $errors->first('description') }}</span>
                                         @endif
@@ -109,8 +109,8 @@
                                     <div class="form-group">
                                         <label class="label-paf" for="status">Status</label>
                                         <select class="form-control input-paf" name="status" id="status">
-                                            <option value="Y" {{$news->status == "Y" ? "selected" : ""}}>Active</option>
-                                            <option value="N" {{$news->status == "N" ? "selected" : ""}}>In-Active</option>
+                                            <option value="Y" {{$event->status == "Y" ? "selected" : ""}}>Active</option>
+                                            <option value="N" {{$event->status == "N" ? "selected" : ""}}>In-Active</option>
                                         </select>
                                     </div>
                                 </div>
@@ -129,44 +129,5 @@
             </div>
         </div>
     </div>
-    <script>
 
-        $(document).ready(function () {
-            $(document).on("change", "#district_id", function () {
-                var district = $("#district_id option:selected").text();
-                $("#district").val(district);
-            });
-
-            $(document).on("change", "#province_id", function () {
-                var name = 'district_id';
-                var id = 'div_district';
-                var selected = 0;
-                var province_id = $(this).val();
-                var province = $("#province_id option:selected").text();
-                $("#province").val(province);
-                getDistrict(id, selected, name, province_id);
-            });
-        });
-
-        function getDistrict(tr_id, selected, name, province_id) {
-            var postData = {
-                "_token": "{{ csrf_token() }}",
-                "province_id": province_id,
-                "default": selected,
-                "name": name
-            };
-            $.ajax({
-                url: 'ajax/get_district',
-                type: 'POST',
-                data: postData,
-                success: function (data) {
-                    id = "#" + tr_id;
-                    $("#" + tr_id).show();
-                    $("#" + tr_id).html(data);
-                    $(".select2").select2({theme: "default"});
-                }
-            });
-        }
-
-    </script>
 @endsection
