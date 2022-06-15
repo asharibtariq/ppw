@@ -201,12 +201,12 @@
             <div class="col-md-6">
                 <div class="event">
                     <div class="event-img">
-                        <a href="{{url('event_details', $news_row->id)}}">
+                        <a href="{{url('event_details', $event_row->id)}}">
                             <img src="{{asset('uploads/event/'.$event_row->image)}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="{{url('event_details', $news_row->id)}}">{{$event_row->title}}</a></h3> <ul class="event-meta">
+                        <h3><a href="{{url('event_details', $event_row->id)}}">{{$event_row->title}}</a></h3> <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> {{$event_row->date}}</li>
                             <li><i class="fa fa-map-marker"></i> {{$event_row->location}}</li>
                         </ul>
