@@ -19,10 +19,16 @@ class MainPageController extends Controller{
         return view('index', $data)->with('title', 'PPW Home');
     }
 
-    public function single_cause($id){
+    public function news_details($id){
         $data['result'] = array();
         $data['result'] = News::findOrFail($id);
-        return view('single_cause', $data)->with('title', 'News Details');
+        return view('pages/news_details', $data)->with('title', 'News Details');
+    }
+
+    public function event_details($id){
+        $data['result'] = array();
+        $data['result'] = Event::findOrFail($id);
+        return view('pages/event_details', $data)->with('title', 'Event Details');
     }
 
 }

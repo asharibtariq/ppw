@@ -26,7 +26,7 @@
         <ul class="navbar-menu nav navbar-nav navbar-right">
             <li><a href="{{url('')}}">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#causes">News</a></li>
+            <li><a href="#news">News</a></li>
             <li ><a href="#events">Events</a></li>
             <li class="has-dropdown"><a href="#">NAP</a>
                 <ul class="dropdown">

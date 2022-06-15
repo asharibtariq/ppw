@@ -116,7 +116,7 @@
     </div>
 </div>
 
-<div id="causes" class="section">
+<div id="news" class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -135,16 +135,16 @@
             <div class="col-md-4">
                 <div class="causes">
                     <div class="causes-img">
-                        <a href="{{url('single_cause', $news_row->id)}}">
+                        <a href="{{url('news_details', $news_row->id)}}">
                             <img src="{{asset('uploads/news/'.$news_row->image)}}" alt="">
                         </a>
                     </div>
                     <div class="causes-content">
                         <h3>
-                            <a href="{{url('single_cause')}}">{{$news_row->title}}</a>
+                            <a href="{{url('news_details', $news_row->id)}}">{{$news_row->title}}</a>
                         </h3>
                         <p>{{$news_row->description}}</p>
-                        <a href="{{url('single_cause')}}" class="primary-button causes-donate">View Details</a>
+                        <a href="{{url('news_details', $news_row->id)}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
             </div>
@@ -201,12 +201,12 @@
             <div class="col-md-6">
                 <div class="event">
                     <div class="event-img">
-                        <a href="{{url('single_event')}}">
+                        <a href="{{url('event_details', $news_row->id)}}">
                             <img src="{{asset('uploads/event/'.$event_row->image)}}" alt="">
                         </a>
                     </div>
                     <div class="event-content">
-                        <h3><a href="{{url('single_event')}}">{{$event_row->title}}</a></h3> <ul class="event-meta">
+                        <h3><a href="{{url('event_details', $news_row->id)}}">{{$event_row->title}}</a></h3> <ul class="event-meta">
                             <li><i class="fa fa-clock-o"></i> {{$event_row->date}}</li>
                             <li><i class="fa fa-map-marker"></i> {{$event_row->location}}</li>
                         </ul>

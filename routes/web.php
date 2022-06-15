@@ -20,7 +20,8 @@ Route::get('/', function () {
 */
 
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
-Route::get('single_cause/{id}', [\App\Http\Controllers\MainPageController::class, 'single_cause']);
+Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class, 'news_details']);
+Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
 
 Route::get('blog', function () {
     return view('blog');
@@ -28,14 +29,6 @@ Route::get('blog', function () {
 
 Route::get('single_blog', function () {
     return view('single_blog');
-});
-
-Route::get('single_cause', function () {
-    return view('single_cause');
-});
-
-Route::get('single_event', function () {
-    return view('single_event');
 });
 
 Auth::routes();
