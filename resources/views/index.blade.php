@@ -58,7 +58,7 @@
     </div>
 </header>
 
-<div id="about" class="section">
+<div id="about" class="section" style="padding-bottom: 4%;">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
