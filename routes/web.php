@@ -91,3 +91,6 @@ Route::get('about', function () {
 Route::get('media', function () {
     return view('pages/media');
 });
+Route::get('videos', function () {
+    return view('pages/videos');
+});

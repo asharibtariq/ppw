@@ -46,7 +46,7 @@
                     <li><a href="{{url('media')}}">Social Media Links</a></li>
                     <li><a href="{{url('media')}}">News Letter</a></li>
                     <li><a href="{{url('media')}}">Picture Gallery</a></li>
-                    <li><a href="#">Videos</a></li>
+                    <li><a href="{{url('videos')}}">Videos</a></li>
                 </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
