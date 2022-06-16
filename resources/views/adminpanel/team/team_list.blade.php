@@ -28,8 +28,8 @@
                     @endif
                 </td>
                 <td>
-                    <a onClick="return confirm('Are you sure you want to update?');" href="{{url('edit_event', $r->id)}}" class="btn btn-info" id="btn-view"><i class="fa fa-edit"></i> Edit</a>
-                    <a onClick="return confirm('Are you sure you want to delete?');" href="{{url('delete_event', $r->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                    <a onClick="return confirm('Are you sure you want to update?');" href="{{url('edit_team', $r->id)}}" class="btn btn-info" id="btn-view"><i class="fa fa-edit"></i> Edit</a>
+                    <a onClick="return confirm('Are you sure you want to delete?');" href="{{url('delete_team', $r->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                 </td>
             </tr>
             @php

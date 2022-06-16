@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Team;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\TeamRequest;
 
 class TeamController extends Controller
@@ -51,14 +52,14 @@ class TeamController extends Controller
         if ($request->hasFile('image')){
             $file = $request->image;
             $extension = $file->getClientOriginalExtension();
-            $imageName = 'event_'.time().'.'.$extension;
+            $imageName = 'team_'.time().'.'.$extension;
 
             $destinationPath = public_path('/uploads/team');
             $file->move($destinationPath, $imageName);
             $insertData['image'] = $imageName;
         }
         Team::create($insertData);
-        return redirect('event')->with('success', 'Team Added Successfully');
+        return redirect('team')->with('success', 'Team Added Successfully');
     }
 
     /**
@@ -107,7 +108,7 @@ class TeamController extends Controller
             //    File::delete($files);
             $file = $request->image;
             $extension = $file->getClientOriginalExtension();
-            $imageName = 'event_'.time().'.'.$extension;
+            $imageName = 'team_'.time().'.'.$extension;
 
             $destinationPath = public_path('/uploads/event');
             $file->move($destinationPath, $imageName);

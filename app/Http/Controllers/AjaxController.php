@@ -84,7 +84,7 @@ class AjaxController extends Controller{
                         'tbl_team.name',
                         'tbl_team.designation',
                         'tbl_team.image',
-                        'tbl_event.department',
+                        'tbl_team.department',
                         'tbl_team.description',
                         'tbl_team.status',
                         'tbl_team.created_at',
