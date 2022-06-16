@@ -88,3 +88,6 @@ Route::get('pakistan_population_fund', function () {
 Route::get('about', function () {
     return view('pages/about');
 });
+Route::get('media', function () {
+    return view('pages/media');
+});

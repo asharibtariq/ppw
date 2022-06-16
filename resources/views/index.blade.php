@@ -131,6 +131,7 @@
             if (!empty($news)){
             $i = 0;
             foreach ($news as $news_row){
+            $news_description = strlen($news_row->description) > 120 ? substr($news_row->description,0,120)."..." : $news_row->description;
             ?>
             <div class="col-md-4">
                 <div class="causes">
@@ -143,7 +144,7 @@
                         <h3>
                             <a href="{{url('news_details', $news_row->id)}}">{{$news_row->title}}</a>
                         </h3>
-                        <p>{{$news_row->description}}</p>
+                        <p>{{$news_description}}</p>
                         <a href="{{url('news_details', $news_row->id)}}" class="primary-button causes-donate">View Details</a>
                     </div>
                 </div>
@@ -166,7 +167,7 @@
 </div>
 
 <div id="cta" class="section">
-    <div class="section-bg" style="background-image:url({{asset('img/npn.jpg')}})" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url({{asset('img/background-2.jpg')}})" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
@@ -196,6 +197,7 @@
             if (!empty($event)){
             $i = 0;
             foreach ($event as $event_row){
+            $event_description = strlen($event_row->description) > 120 ? substr($event_row->description,0,120)."..." : $event_row->description;
             ?>
 
             <div class="col-md-6">
@@ -210,7 +212,7 @@
                             <li><i class="fa fa-clock-o"></i> {{$event_row->date}}</li>
                             <li><i class="fa fa-map-marker"></i> {{$event_row->location}}</li>
                         </ul>
-                        <p>{{$event_row->description}}</p>
+                        <p>{{$event_description}}</p>
                     </div>
                 </div>
             </div>
@@ -260,13 +262,12 @@
 </div>
 
 <div id="testimonial" class="section">
-    <div class="section-bg" style="background-image:url({{asset('img/background-2.jpg')}})" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url({{asset('img/office_wall_01.jpg')}})" data-stellar-background-ratio="0.5"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
-                    <h2 class="title">Our Team</h2>
-
+                    <h2 class="title" style="color: white !important;">Our Team</h2>
                 </div>
             </div>
             <div class="col-md-12">
@@ -307,7 +308,7 @@
                             <div class="testimonial-img">
                                 <img src="{{asset('img/xavatar-1.jpg.pagespeed.ic.RkR3XY-knB.jpg')}}" alt="">
                             </div>
-                            <h3>John Doe</h3>
+                            <h3>Jane Doe</h3>
                             <span>Volunteer</span>
                         </div>
                         <div class="testimonial-quote">
@@ -453,44 +454,6 @@
 
 <script>
     $(document).ready(function () {
-
-        {{--
-        $("#about_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#about").offset().top
-            }, 1200);
-        });
-        $("#numbers_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#numbers").offset().top
-            }, 1200);
-        });
-        $("#causes_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#causes").offset().top
-            }, 1200);
-        });
-        $("#cta_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#cta").offset().top
-            }, 1200);
-        });
-        $("#events_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#events").offset().top
-            }, 1200);
-        });
-        $("#testimonial_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#testimonial").offset().top
-            }, 1200);
-        });
-        $("#blog_tab").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#blog").offset().top
-            }, 1200);
-        });
-        --}}
 
     });
 </script>

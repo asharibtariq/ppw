@@ -25,36 +25,36 @@
 
             <div class="col-md-4">
                 <div class="footer">
-                    <h3 class="footer-title">Galery</h3>
+                    <h3 class="footer-title">Highlights</h3>
                     <ul class="footer-galery">
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-1.jpg.pagespeed.ic.5FpyVX8CL-.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_01.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_01.jpg')}}" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-2.jpg.pagespeed.ic.vJZ9jaCy_o.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_02.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_02.jpg')}}" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-3.jpg.pagespeed.ic.V8KhVmu15P.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_03.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_03.jpg')}}" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-4.jpg.pagespeed.ic.pwzAvjWorg.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_04.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_04.jpg')}}" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-5.jpg.pagespeed.ic.UwgoJ17uXG.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_05.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_05.jpg')}}" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{{asset('img/xgalery-6.jpg.pagespeed.ic.XG6u4zVdDT.jpg')}}" alt="">
+                            <a href="{{asset('img/gal_06.jpg')}}" target="_blank">
+                                <img src="{{asset('img/gal_06.jpg')}}" alt="">
                             </a>
                         </li>
                     </ul>
