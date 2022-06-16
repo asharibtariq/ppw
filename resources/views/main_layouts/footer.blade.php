@@ -8,16 +8,16 @@
                             <img src="{{asset('img/govt_logo.png')}}" alt="">
                         </a>
                     </div>
-                    <p>The Ministry of National Health Services, Regulation and Coordination is a cabinet level ministry of the government of Pakistan with responsibility for national public health.</p>
+                    <p style="color: black !important;">The Ministry of National Health Services, Regulation and Coordination is a cabinet level ministry of the government of Pakistan with responsibility for national public health.</p>
                     <ul class="footer-contact">
                         <li>
-                            <i class="fa fa-map-marker"></i> 3rd Floor Kohsar Block, Secretariate
+                            <i class="fa fa-map-marker"></i> <a href="https://goo.gl/maps/DjxGJjNbSF6zY23g6" target="_blank">3rd Floor Kohsar Block, Secretariate</a>
                         </li>
                         <li>
-                            <i class="fa fa-phone"></i> +92 51 9216280
+                            <i class="fa fa-phone"></i> <a href="tel:+92519216280" target="_blank">+92 51 9216280</a>
                         </li>
                         <li>
-                            <i class="fa fa-envelope"></i> <a href="#"><span class="__cf_email__" data-cfemail="e8ab80899a819c91a88d85898184c68b8785">dg.tech@nhsrc.gov.pk</span></a>
+                            <i class="fa fa-envelope"></i> <a href="mailto:dg.tech@nhsrc.gov.pk" target="_blank">dg.tech@nhsrc.gov.pk</a>
                         </li>
                     </ul>
                 </div>
