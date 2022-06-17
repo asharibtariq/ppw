@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="header-content">
-                        <h1>News Details</h1>
+                        <h1>{{$result->title}}</h1>
                         <ul class="breadcrumb">
                             <li><a href="{{url('')}}">Home</a></li>
                             <li><a href="#">News</a></li>

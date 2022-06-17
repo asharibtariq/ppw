@@ -44,6 +44,13 @@
                 }))
             }(w, d, 0, "script");
         })(window, document);</script>
+    <style>
+        p{
+            color: black;
+            font-size: medium;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
 

@@ -279,58 +279,54 @@
                                 <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
-                            <span>DG POPULATION</span>
+                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
                         </div>
-                        <div class="testimonial-quote">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-meta">
-                            <div class="testimonial-img">
-                                <img src="{{asset('img/xavatar-2.jpg.pagespeed.ic.lZk0jiPD8Z.jpg')}}" alt="">
-                            </div>
-                            <h3>John Doe</h3>
-                            <span>Volunteer</span>
-                        </div>
-                        <div class="testimonial-quote">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </blockquote>
+                        <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+
+                                <p>Currently working as a Director General in Population Program Wing of Ministry of NHSRC, Islamabad, Pakistan.</p>
+
                         </div>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-meta">
                             <div class="testimonial-img">
-                                <img src="{{asset('img/xavatar-1.jpg.pagespeed.ic.RkR3XY-knB.jpg')}}" alt="">
+                                <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
-                            <h3>Jane Doe</h3>
-                            <span>Volunteer</span>
+                            <h3>DR. SABINA IMRAN DURRANI</h3>
+                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
                         </div>
-                        <div class="testimonial-quote">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </blockquote>
+                        <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+
+                            <p>Currently working as a Director General in Population Program Wing of Ministry of NHSRC, Islamabad, Pakistan.</p>
+
                         </div>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-meta">
                             <div class="testimonial-img">
-                                <img src="{{asset('img/xavatar-2.jpg.pagespeed.ic.lZk0jiPD8Z.jpg')}}" alt="">
+                                <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
-                            <h3>John Doe</h3>
-                            <span>Volunteer</span>
+                            <h3>DR. SABINA IMRAN DURRANI</h3>
+                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
                         </div>
-                        <div class="testimonial-quote">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </blockquote>
+                        <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+
+                            <p>Currently working as a Director General in Population Program Wing of Ministry of NHSRC, Islamabad, Pakistan.</p>
+
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-meta">
+                            <div class="testimonial-img">
+                                <img src="{{asset('img/dg2.jpg')}}" alt="">
+                            </div>
+                            <h3>DR. SABINA IMRAN DURRANI</h3>
+                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
+                        </div>
+                        <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+
+                            <p>Currently working as a Director General in Population Program Wing of Ministry of NHSRC, Islamabad, Pakistan.</p>
+
                         </div>
                     </div>
 
