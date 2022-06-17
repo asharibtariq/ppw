@@ -125,6 +125,32 @@ class AjaxController extends Controller{
                 $data['links'] = $contact;
                 return view('adminpanel.contact.contact_list')->with($data);
                 break;
+            case 'publication_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_news.title'] = $title;
+                */
+                $publication = DB::table('tbl_publication')
+                    ->select('tbl_publication.id',
+                        'tbl_publication.title',
+                        'tbl_publication.description',
+                        'tbl_publication.author',
+                        'tbl_publication.document',
+                        'tbl_publication.status',
+                        'tbl_publication.created_at',
+                        'tbl_publication.updated_at')
+                    ->where('title', 'LIKE', '%' . $title . '%')
+                    //    ->groupBy('tbl_publication.id')
+                    ->orderBy('tbl_publication.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $publication->items();
+                $data['links'] = $publication;
+                return view('adminpanel.publication.publication_list')->with($data);
+                break;
             default:
                 break;
         }

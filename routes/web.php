@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
 Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class, 'news_details']);
 Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
+Route::get('publication_details', [\App\Http\Controllers\MainPageController::class, 'publication_details']);
 
 Route::get('blog', function () {
     return view('blog');
@@ -53,7 +54,7 @@ Route::get('edit_event/{id}', [\App\Http\Controllers\EventController::class, 'ed
 Route::post('update_event/{id}', [\App\Http\Controllers\EventController::class, 'update']);
 Route::get('delete_event/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
 
-// Event Contacts
+//  Contacts Routes
 Route::get('contact', [\App\Http\Controllers\ContactController::class, 'index']);
 Route::get('add_contact', [\App\Http\Controllers\ContactController::class, 'create']);
 Route::post('add_contact', [\App\Http\Controllers\ContactController::class, 'store']);
@@ -62,7 +63,7 @@ Route::get('edit_contact/{id}', [\App\Http\Controllers\ContactController::class,
 Route::post('update_contact/{id}', [\App\Http\Controllers\ContactController::class, 'update']);
 Route::get('delete_contact/{id}', [\App\Http\Controllers\ContactController::class, 'destroy']);
 
-// Event Teams
+//  Teams Routes
 Route::get('team', [\App\Http\Controllers\TeamController::class, 'index']);
 Route::get('add_team', [\App\Http\Controllers\TeamController::class, 'create']);
 Route::post('add_team', [\App\Http\Controllers\TeamController::class, 'store']);
@@ -70,6 +71,15 @@ Route::get('team/{id}', [\App\Http\Controllers\TeamController::class, 'show']);
 Route::get('edit_team/{id}', [\App\Http\Controllers\TeamController::class, 'edit']);
 Route::post('update_team/{id}', [\App\Http\Controllers\TeamController::class, 'update']);
 Route::get('delete_team/{id}', [\App\Http\Controllers\TeamController::class, 'destroy']);
+
+// Publication Routes
+Route::get('publication', [\App\Http\Controllers\PublicationController::class, 'index']);
+Route::get('add_publication', [\App\Http\Controllers\PublicationController::class, 'create']);
+Route::post('add_publication', [\App\Http\Controllers\PublicationController::class, 'store']);
+Route::get('publication/{id}', [\App\Http\Controllers\PublicationController::class, 'show']);
+Route::get('edit_publication/{id}', [\App\Http\Controllers\PublicationController::class, 'edit']);
+Route::post('update_publication/{id}', [\App\Http\Controllers\PublicationController::class, 'update']);
+Route::get('delete_publication/{id}', [\App\Http\Controllers\PublicationController::class, 'destroy']);
 
 // Static Pages
 

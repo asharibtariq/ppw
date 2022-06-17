@@ -27,3 +27,8 @@ $user_menu = user_menu();
     <a class="left-bar-submenu" href="{{ url('team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Teams</a>
     <a class="left-bar-submenu" href="{{ url('add_team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Teams</a>
 </div>
+<a href="javascript:;" data-toggle="collapse" data-target="#publication-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Publications <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
+<div id="publication-menu" class="collapse left-bar-main-collapse">
+    <a class="left-bar-submenu" href="{{ url('publication') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Publication</a>
+    <a class="left-bar-submenu" href="{{ url('add_publication') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Publication</a>
+</div>
