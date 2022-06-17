@@ -22,12 +22,15 @@ class MainPageController extends Controller{
     public function news_details($id){
         $data['result'] = array();
         $data['result'] = News::findOrFail($id);
+        $data['news'] = News::orderBy('id', 'desc')->take(3)->get();
+//        pre($data['news'],1);
         return view('pages/news_details', $data)->with('title', 'News Details');
     }
 
     public function event_details($id){
         $data['result'] = array();
         $data['result'] = Event::findOrFail($id);
+        $data['event'] = Event::orderBy('id', 'desc')->take(3)->get();
         return view('pages/event_details', $data)->with('title', 'Event Details');
     }
 

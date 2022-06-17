@@ -42,68 +42,34 @@
 
                     <div class="widget">
                         <h3 class="widget-title">Latest News</h3>
-
+                        @php
+                            $news = json_decode($news)
+                        @endphp
+                        <?php
+                        if (!empty($news)){
+                            $i = 0;
+                            foreach ($news as $news_row){
+                                $news_description = strlen($news_row->description) > 80 ? substr($news_row->description,0,80)."..." : $news_row->description;
+                                ?>
                         <div class="widget-causes">
-                            <a href="#">
+                            <a href="{{url('news_details', $news_row->id)}}" target="_blank">
                                 <div class="widget-img">
-                                    <img src="{{asset('img/xwidget-1.jpg.pagespeed.ic.oldoL5gfhD.jpg')}}" alt="">
+                                    <img src="{{asset('uploads/news/'.$news_row->image)}}" alt="">
                                 </div>
                                 <div class="widget-content">
-                                    Possit nostro aeterno eu vis, ut cum quem reque
-                                    <div class="causes-progress">
-                                        <div class="causes-progress-bar">
-                                            <div style="width: 64%;"></div>
-                                        </div>
-                                    </div>
+                                    {{$news_row->title}}
                                 </div>
                             </a>
-                            <div>
-                                <span class="causes-raised">Raised: <strong>52.000$</strong></span> -
-                                <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                            </div>
+                            <small>{{$news_description}}</small>
                         </div>
+                         <?php
+                                $i++;
+                                    ?>
+            <?php
+                            }
+                        }
+                        ?>
 
-
-                        <div class="widget-causes">
-                            <a href="#">
-                                <div class="widget-img">
-                                    <img src="{{asset('img/xwidget-2.jpg.pagespeed.ic.BwvwTN5sj9.jpg')}}" alt="">
-                                </div>
-                                <div class="widget-content">
-                                    Vix fuisset tibique facilisis cu. Justo accusata ius at
-                                    <div class="causes-progress">
-                                        <div class="causes-progress-bar">
-                                            <div style="width: 75%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div>
-                                <span class="causes-raised">Raised: <strong>52.000$</strong></span> -
-                                <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                            </div>
-                        </div>
-
-
-                        <div class="widget-causes">
-                            <a href="#">
-                                <div class="widget-img">
-                                    <img src="{{asset('img/xwidget-3.jpg.pagespeed.ic.Cz6oaCi-ex.jpg')}}" alt="">
-                                </div>
-                                <div class="widget-content">
-                                    Possit nostro aeterno eu vis, ut cum quem reque
-                                    <div class="causes-progress">
-                                        <div class="causes-progress-bar">
-                                            <div style="width: 53%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div>
-                                <span class="causes-raised">Raised: <strong>52.000$</strong></span> -
-                                <span class="causes-goal">Goal: <strong>90.000$</strong></span>
-                            </div>
-                        </div>
 
                     </div>
 

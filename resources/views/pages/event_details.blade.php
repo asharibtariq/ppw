@@ -60,51 +60,37 @@
 			<aside id="aside" class="col-md-3">
 				<div class="widget">
 					<h3 class="widget-title">Latest Posts</h3>
-
+					@php
+						$event = json_decode($event)
+					@endphp
+                    <?php
+                    if (!empty($event)){
+                        $i = 0;
+                        foreach ($event as $event_row){
+                            $event_description = strlen($event_row->description) > 80 ? substr($event_row->description,0,80)."..." : $event_row->description;
+                            $event_title= strlen($event_row->title) > 40 ? substr($event_row->title,0,40)."..." : $event_row->title;
+                            ?>
 					<div class="widget-post">
-						<a href="#">
+						<a href="{{url('event_details', $event_row->id)}}" target="_blank">
 							<div class="widget-img">
-								<img src="{{asset('img/xwidget-1.jpg.pagespeed.ic.oldoL5gfhD.jpg')}}" alt="">
+								<img src="{{asset('uploads/event/'.$event_row->image)}}" alt="">
 							</div>
 							<div class="widget-content">
-								Possit nostro aeterno eu vis, ut cum quem reque
+								{{$event_title}}
 							</div>
 						</a>
-						<ul class="article-meta">
-							<li>By John doe</li>
-							<li>12 November 2018</li>
-						</ul>
+						<small>{{$event_description}}</small>
 					</div>
+ <?php
+                            $i++;
 
-					<div class="widget-post">
-						<a href="#">
-							<div class="widget-img">
-								<img src="{{asset('img/xwidget-2.jpg.pagespeed.ic.BwvwTN5sj9.jpg')}}" alt="">
-							</div>
-							<div class="widget-content">
-								Vix fuisset tibique facilisis cu. Justo accusata ius at
-							</div>
-						</a>
-						<ul class="article-meta">
-							<li>By John doe</li>
-							<li>12 November 2018</li>
-						</ul>
-					</div>
+                                ?>
+            <?php
+                        }
+                    }
+                    ?>
 
-					<div class="widget-post">
-						<a href="#">
-							<div class="widget-img">
-								<img src="{{asset('img/xwidget-3.jpg.pagespeed.ic.Cz6oaCi-ex.jpg')}}" alt="">
-							</div>
-							<div class="widget-content">
-								Possit nostro aeterno eu vis, ut cum quem reque
-							</div>
-						</a>
-						<ul class="article-meta">
-							<li>By John doe</li>
-							<li>12 November 2018</li>
-						</ul>
-					</div>
+
 
 				</div>
 			</aside>

@@ -90,7 +90,7 @@ class EventController extends Controller{
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(NewsRequest $request, $id){
+    public function update(EventRequest $request, $id){
         $userId = Auth::id();
         $event = Event::findOrFail($id);
         $updateData = $request->all();
