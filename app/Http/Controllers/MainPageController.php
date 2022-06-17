@@ -14,8 +14,10 @@ class MainPageController extends Controller{
 
     public function index(){
         $data['result'] = array();
-        $data['news'] = News::all()->sortByDesc('id')->where('status','=','Y');
-        $data['event'] = Event::all()->where('status','=','Y');
+//        $data['news'] = News::all()->sortByDesc('id')->where('status','=','Y');
+        $data['news'] = News::orderBy('id', 'desc')->take(6)->where('status','=','Y')->get();
+        $data['event'] = Event::orderBy('id', 'desc')->take(4)->where('status','=','Y')->get();
+//        $data['event'] = Event::all()->where('status','=','Y');
         return view('index', $data)->with('title', 'PPW Home');
     }
 
@@ -30,7 +32,8 @@ class MainPageController extends Controller{
     public function event_details($id){
         $data['result'] = array();
         $data['result'] = Event::findOrFail($id);
-        $data['event'] = Event::orderBy('id', 'desc')->take(3)->get();
+        $date = date("d-m-Y");
+        $data['event'] = Event::orderBy('id', 'desc')->take(3)->where('date','>',$date)->get();
         return view('pages/event_details', $data)->with('title', 'Event Details');
     }
 

@@ -59,7 +59,7 @@
 
 			<aside id="aside" class="col-md-3">
 				<div class="widget">
-					<h3 class="widget-title">Latest Posts</h3>
+					<h3 class="widget-title">Latest Events</h3>
 					@php
 						$event = json_decode($event)
 					@endphp
