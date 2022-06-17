@@ -174,7 +174,7 @@
                 <div class="cta-content text-center">
                     <h1 style="color: white">PPW</h1>
                     <p style="color: white" class="lead">Working on Pakistan's National narrative : Rights, Responsibility & Balance (Tawazun).</p>
-                    <a href="#" class="primary-button">Visit Us Now!</a>
+                    <a href="{{url('about')}}" class="primary-button">Visit Us Now!</a>
                 </div>
             </div>
         </div>
@@ -279,7 +279,7 @@
                                 <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
-                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
+                            <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
                         </div>
                         <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
 
@@ -293,7 +293,7 @@
                                 <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
-                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
+                            <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
                         </div>
                         <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
 
@@ -307,7 +307,7 @@
                                 <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
-                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
+                            <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
                         </div>
                         <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
 
@@ -321,7 +321,7 @@
                                 <img src="{{asset('img/dg2.jpg')}}" alt="">
                             </div>
                             <h3>DR. SABINA IMRAN DURRANI</h3>
-                            <span style="text-shadow: 2px 2px black">DG POPULATION</span>
+                            <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
                         </div>
                         <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
 
