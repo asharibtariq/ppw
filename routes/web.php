@@ -23,6 +23,7 @@ Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
 Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class, 'news_details']);
 Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
 Route::get('publication_details', [\App\Http\Controllers\MainPageController::class, 'publication_details']);
+Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
 Route::get('blog', function () {
     return view('blog');
@@ -35,7 +36,6 @@ Route::get('single_blog', function () {
 Auth::routes();
 Route::post('ajax_content', [\App\Http\Controllers\AjaxController::class, 'content']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
 // News Routes
 Route::get('news', [\App\Http\Controllers\NewsController::class, 'index']);
