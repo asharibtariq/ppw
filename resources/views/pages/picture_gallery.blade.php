@@ -198,22 +198,22 @@
                 <div class="col-md-12">
                     <!-- Images used to open the lightbox -->
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_01.jpg')}}" onclick="openModal();currentSlide(1)" class="hover-shadow">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_03.jpg')}}" onclick="openModal();currentSlide(2)" class="hover-shadow">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_07.jpg')}}" onclick="openModal();currentSlide(3)" class="hover-shadow">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_08.jpg')}}" onclick="openModal();currentSlide(4)" class="hover-shadow">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_09.jpg')}}" onclick="openModal();currentSlide(5)" class="hover-shadow">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                             <img src="{{asset('img/pic_gal_10.jpg')}}" onclick="openModal();currentSlide(6)" class="hover-shadow">
                         </div>
                     </div>
@@ -264,16 +264,16 @@
 
                             <!-- Thumbnail image controls -->
                             {{--
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <img class="demo" src="{{asset('img/pic_gal_01.jpg')}}" onclick="currentSlide(1)" alt="image-1">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <img class="demo" src="{{asset('img/pic_gal_03.jpg')}}" onclick="currentSlide(2)" alt="image-2">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <img class="demo" src="{{asset('img/pic_gal_07.jpg')}}" onclick="currentSlide(3)" alt="image-3">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
                                 <img class="demo" src="{{asset('img/pic_gal_08.jpg')}}" onclick="currentSlide(4)" alt="image-4">
                             </div>
                             --}}

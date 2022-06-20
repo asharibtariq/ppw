@@ -65,17 +65,17 @@
             <div class="col-md-4">
                 <div class="footer">
                     <h3 class="footer-title">Newsletter</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <p>Working on Pakistan's National narrative : Rights, Responsibility & Balance (Tawazun).</p>
                     <form class="footer-newsletter">
                         <input class="input" type="email" placeholder="Enter your email">
                         <button class="primary-button">Subscribe</button>
                     </form>
                     <ul class="footer-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="https://www.facebook.com/Population-Program-Wing-110100725033112" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/PWing2022" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        {{--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
+                        <li><a href="https://www.instagram.com/accounts/login/?next=/pakistanpopulationwing/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        {{--<li><a href="#"><i class="fa fa-pinterest"></i></a></li>--}}
                     </ul>
                 </div>
             </div>
