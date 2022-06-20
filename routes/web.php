@@ -35,7 +35,7 @@ Route::get('single_blog', function () {
 Auth::routes();
 Route::post('ajax_content', [\App\Http\Controllers\AjaxController::class, 'content']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('contact_add', [\App\Http\Controllers\ContactController::class, 'contact_add'])->name('contact_add');
+Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
 // News Routes
 Route::get('news', [\App\Http\Controllers\NewsController::class, 'index']);
