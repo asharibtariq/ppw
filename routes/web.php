@@ -101,6 +101,9 @@ Route::get('about', function () {
 Route::get('media', function () {
     return view('pages/media');
 });
+Route::get('picture_gallery', function () {
+    return view('pages/picture_gallery');
+});
 Route::get('videos', function () {
     return view('pages/videos');
 });

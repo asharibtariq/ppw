@@ -14,6 +14,7 @@
             </button>
         </div>
 
+        {{--
         <div class="navbar-search">
             <button class="search-btn"><i class="fa fa-search"></i></button>
             <div class="search-form">
@@ -22,18 +23,19 @@
                 </form>
             </div>
         </div>
+        --}}
 
         <ul class="navbar-menu nav navbar-nav navbar-right">
             <li><a href="{{url('')}}">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#news">News</a></li>
-            <li ><a href="#events">Events</a></li>
+            <li><a href="{{url('')}}#about">About</a></li>
+            <li><a href="{{url('')}}#news">News</a></li>
+            <li ><a href="{{url('')}}#events">Events</a></li>
             <li class="has-dropdown"><a href="#">NAP</a>
                 <ul class="dropdown">
                     {{--<li><a href="#">The Context</a></li>--}}
                     {{--<li><a href="#">Vision</a></li>--}}
                     <li><a href="{{url("cci_recommendation")}}">CCI Recommendations</a></li>
-                    <li><a href="{{url("https://visualindicators.com/cciportal/login")}}">CCI Portal</a></li>
+                    <li><a href="{{url("https://visualindicators.com/cciportal/login")}}" target="_blank">CCI Portal</a></li>
                     <li><a href="{{url("task_force")}}">Task Force</a></li>
                     {{--<li><a href="#">Meetings FTF</a></li>--}}
                     <li><a href="{{url("national_action_plan")}}">NAP Progress</a></li>
@@ -43,13 +45,13 @@
             <li class="has-dropdown"><a href="#">Media Centre</a>
                 <ul class="dropdown">
                     <li><a href="{{url('media')}}">Press Releases</a></li>
-                    <li><a href="#">Training Material</a></li>
+                    {{--<li><a href="#">Training Material</a></li>--}}
                     <li><a href="{{url('publication_details')}}">Publication</a></li>
-                    <li><a href="{{url('media')}}">Picture Gallery</a></li>
+                    <li><a href="{{url('picture_gallery')}}">Picture Gallery</a></li>
                     <li><a href="{{url('videos')}}">Videos</a></li>
                 </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{url('')}}#contact">Contact</a></li>
         </ul>
 
     </div>
