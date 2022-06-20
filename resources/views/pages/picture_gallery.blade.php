@@ -21,11 +21,6 @@
             display: table;
             clear: both;
         }
-        /* Create four equal columns that floats next to eachother */
-        .column {
-            float: left;
-            width: 33%;
-        }
         /* The Modal (background) */
         .modal {
             display: none;
@@ -114,7 +109,7 @@
         }
         img.hover-shadow {
             transition: 0.3s;
-            width: 100%;
+            width: 106%;
             height: 180px;
             padding-top: 2%;
         }
@@ -203,22 +198,22 @@
                 <div class="col-md-12">
                     <!-- Images used to open the lightbox -->
                     <div class="row">
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_01.jpg')}}" onclick="openModal();currentSlide(1)" class="hover-shadow">
                         </div>
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_03.jpg')}}" onclick="openModal();currentSlide(2)" class="hover-shadow">
                         </div>
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_07.jpg')}}" onclick="openModal();currentSlide(3)" class="hover-shadow">
                         </div>
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_08.jpg')}}" onclick="openModal();currentSlide(4)" class="hover-shadow">
                         </div>
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_09.jpg')}}" onclick="openModal();currentSlide(5)" class="hover-shadow">
                         </div>
-                        <div class="column">
+                        <div class="col-md-4">
                             <img src="{{asset('img/pic_gal_10.jpg')}}" onclick="openModal();currentSlide(6)" class="hover-shadow">
                         </div>
                     </div>
@@ -269,17 +264,17 @@
 
                             <!-- Thumbnail image controls -->
                             {{--
-                            <div class="column">
-                                <img class="demo" src="{{asset('img/pic_gal_01.jpg')}}" onclick="currentSlide(1)" style="width: 285px; height: 150px;" alt="Nature">
+                            <div class="col-md-4">
+                                <img class="demo" src="{{asset('img/pic_gal_01.jpg')}}" onclick="currentSlide(1)" alt="image-1">
                             </div>
-                            <div class="column">
-                                <img class="demo" src="{{asset('img/pic_gal_03.jpg')}}" onclick="currentSlide(2)" style="width: 285px; height: 150px;" alt="Snow">
+                            <div class="col-md-4">
+                                <img class="demo" src="{{asset('img/pic_gal_03.jpg')}}" onclick="currentSlide(2)" alt="image-2">
                             </div>
-                            <div class="column">
-                                <img class="demo" src="{{asset('img/pic_gal_07.jpg')}}" onclick="currentSlide(3)" style="width: 285px; height: 150px;" alt="Mountains">
+                            <div class="col-md-4">
+                                <img class="demo" src="{{asset('img/pic_gal_07.jpg')}}" onclick="currentSlide(3)" alt="image-3">
                             </div>
-                            <div class="column">
-                                <img class="demo" src="{{asset('img/pic_gal_08.jpg')}}" onclick="currentSlide(4)" style="width: 285px; height: 150px;" alt="Lights">
+                            <div class="col-md-4">
+                                <img class="demo" src="{{asset('img/pic_gal_08.jpg')}}" onclick="currentSlide(4)" alt="image-4">
                             </div>
                             --}}
 
