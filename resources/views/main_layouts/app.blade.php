@@ -45,6 +45,9 @@
             }(w, d, 0, "script");
         })(window, document);</script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         p{
             color: black;
             font-size: medium;
