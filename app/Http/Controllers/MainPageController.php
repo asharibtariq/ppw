@@ -44,7 +44,7 @@ class MainPageController extends Controller{
         $data['result'] = array();
 //        $data['result'] = Publication::findOrFail($id);
 //        $date = date("d-m-Y");
-        $data['publication'] = Publication::orderBy('id', 'desc')->take(3)->get();
+        $data['publication'] = Publication::orderBy('id', 'desc')->get();
         return view('pages/publication_details', $data)->with('title', 'Event Details');
     }
 
