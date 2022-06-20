@@ -16,7 +16,7 @@
                             @endforeach
                         @endif
 
-                        <form name="" method="post" action="add_publication" enctype="multipart/form-data">
+                        <form name="" method="post" action="{{url('add_publication')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-4">
