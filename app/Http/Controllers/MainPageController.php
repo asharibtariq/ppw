@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Publication;
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Models\Contact;
 use App\Models\News;
 use App\Models\Event;
 
@@ -37,12 +39,19 @@ class MainPageController extends Controller{
         $data['event'] = Event::orderBy('id', 'desc')->take(3)->where('date','>',$date)->get();
         return view('pages/event_details', $data)->with('title', 'Event Details');
     }
+
     public function publication_details(){
         $data['result'] = array();
 //        $data['result'] = Publication::findOrFail($id);
 //        $date = date("d-m-Y");
         $data['publication'] = Publication::orderBy('id', 'desc')->take(3)->get();
         return view('pages/publication_details', $data)->with('title', 'Event Details');
+    }
+
+    public function contact_add(ContactRequest $request){
+        $insertData = $request->all();
+        Contact::create($insertData);
+        return redirect(url(''))->with('success', 'Contact Added Successfully');
     }
 
 }

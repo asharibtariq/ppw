@@ -39,7 +39,7 @@
                                     <p class="lead">Commemoration of the International Midwives Day 2022 Arranged by
                                         Ministry of National Health Services Regulation& Coordination held at MCH PIMS,
                                         9th May 2022.</p>
-                                    <a href="#" class="primary-button">View Event</a>
+                                    {{--<a href="#" class="primary-button">View Event</a>--}}
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                     <p class="lead">International Women's Day was marked by the Launch of National
                                         Gender Policy Framework. Ministry of Planning Development & Special Initiatives
                                         arranged the event.</p>
-                                    <a href="#" class="primary-button">View Event</a>
+                                    {{--<a href="#" class="primary-button">View Event</a>--}}
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                                     <p class="lead">The event was graced by Iftikhar Shallwani Special Secretary M/o
                                         MHSRC@Shallwani DG Sabina Durrani PPW, Dr Mohamed Afifi Regional Director , and
                                         health professionals from all provinces.</p>
-                                    <a href="#" class="primary-button">View Event</a>
+                                    {{--<a href="#" class="primary-button">View Event</a>--}}
                                 </div>
                             </div>
                         </div>
@@ -397,33 +397,51 @@
         <div class="container">
             <h3>Contact Us</h3>
             <p>Population Program Wing.</p>
-            <form>
+            <form name="" method="post" action="{{url('contact_add')}}">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="input" id="firstname" name="firstname" placeholder="First Name" type="text"
-                                   required>
+                            <input class="input"
+                                   id="firstname"
+                                   name="firstname"
+                                   placeholder="First Name"
+                                   type="text"
+                                   required/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="input" id="lastname" name="lastname" placeholder="Last Name" type="text">
+                            <input class="input"
+                                   id="lastname"
+                                   name="lastname"
+                                   placeholder="Last Name"
+                                   type="text"/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="input" id="phonenumber" name="phonenumber" placeholder="Phone Number"
-                                   type="text" required>
+                            <input class="input"
+                                   id="phonenumber"
+                                   name="phonenumber"
+                                   placeholder="Phone Number"
+                                   type="text" required/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="input" id="email" name="email" placeholder="Email" type="email" required>
+                            <input class="input"
+                                   id="email"
+                                   name="email"
+                                   placeholder="Email"
+                                   type="email" required/>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <textarea class="input" id="message" name="message" placeholder="Message"
+                            <textarea class="input"
+                                      id="message"
+                                      name="message"
+                                      placeholder="Message"
                                       required></textarea>
                         </div>
                         <button class="primary-button">Submit</button>
