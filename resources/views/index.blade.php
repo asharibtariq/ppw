@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="col-md-offset-1 col-md-6">
-                    <a href="{{asset('vid/about_video_01.mp4')}}" class="about-video">
+                    <a href="{{asset('vid/about_video_01.mp4')}}" class="about-video" target="_blank">
                         <i class="play-icon fa fa-play"></i>
                         <img src="{{asset('img/aboout_img_01.jpg')}}" alt="">
                     </a>
