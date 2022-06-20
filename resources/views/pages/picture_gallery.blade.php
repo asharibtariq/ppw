@@ -63,7 +63,7 @@
             cursor: pointer;
         }
         /* Hide the slides by default */
-        .mySlides {
+        .gallerySlides {
             display: none;
         }
         /* Next & previous buttons */
@@ -224,36 +224,36 @@
                     </div>
 
                     <!-- The Modal/Lightbox -->
-                    <div id="myModal" class="modal">
+                    <div id="galleryModal" class="modal">
                         <span class="close cursor" onclick="closeModal()">&times;</span>
                         <div class="modal-content">
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">1 / 6</div>
                                 <img src="{{asset('img/pic_gal_01.jpg')}}" style="width:100%">
                             </div>
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">2 / 6</div>
                                 <img src="{{asset('img/pic_gal_03.jpg')}}" style="width:100%">
                             </div>
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">3 / 6</div>
                                 <img src="{{asset('img/pic_gal_07.jpg')}}" style="width:100%">
                             </div>
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">4 / 6</div>
                                 <img src="{{asset('img/pic_gal_08.jpg')}}" style="width:100%">
                             </div>
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">5 / 6</div>
                                 <img src="{{asset('img/pic_gal_09.jpg')}}" style="width:100%">
                             </div>
 
-                            <div class="mySlides">
+                            <div class="gallerySlides">
                                 <div class="numbertext">6 / 6</div>
                                 <img src="{{asset('img/pic_gal_10.jpg')}}" style="width:100%">
                             </div>
@@ -448,30 +448,25 @@
     <script>
         // Open the Modal
         function openModal() {
-            document.getElementById("myModal").style.display = "block";
+            document.getElementById("galleryModal").style.display = "block";
         }
-
         // Close the Modal
         function closeModal() {
-            document.getElementById("myModal").style.display = "none";
+            document.getElementById("galleryModal").style.display = "none";
         }
-
         var slideIndex = 1;
         showSlides(slideIndex);
-
         // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
-
         // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
-
         function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName("gallerySlides");
             var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
             if (n > slides.length) {slideIndex = 1}
