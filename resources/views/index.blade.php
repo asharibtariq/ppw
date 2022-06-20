@@ -398,6 +398,7 @@
             <h3>Contact Us</h3>
             <p>Population Program Wing.</p>
             <form name="" method="post" action="{{url('contact_add')}}">
+                @csrf
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -444,7 +445,7 @@
                                       placeholder="Message"
                                       required></textarea>
                         </div>
-                        <button class="primary-button">Submit</button>
+                        <button type="submit" class="primary-button">Submit</button>
                     </div>
                 </div>
             </form>
