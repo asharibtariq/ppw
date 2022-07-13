@@ -28,6 +28,37 @@
     <header id="home">
         <div id="home-owl" class="owl-carousel owl-theme">
 
+            @php
+                $carousel_event = json_decode($carousel_event)
+            @endphp
+            <?php
+            if (!empty($carousel_event)){
+            foreach ($carousel_event as $carousel_event_row){
+            $carousel_event_description = strlen($carousel_event_row->description) > 120 ? substr($carousel_event_row->description, 0, 120) . "..." : $carousel_event_row->description;
+            ?>
+
+            <div class="home-item">
+                <div class="section-bg" style="background-image:url({{asset('uploads/event/'.$carousel_event_row->image)}})"></div>
+                <div class="home">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="home-content">
+                                    <h1>{{$carousel_event_row->title}}</h1>
+                                    <p class="lead">{{$carousel_event_description}}</p>
+                                    <a href="{{url('event_details', $carousel_event_row->id)}}" class="primary-button">View Event</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            }
+            }
+            ?>
+
+            {{--
             <div class="home-item">
                 <div class="section-bg" style="background-image:url({{asset('img/main_page_img_01.jpg')}})"></div>
                 <div class="home">
@@ -39,7 +70,7 @@
                                     <p class="lead">Commemoration of the International Midwives Day 2022 Arranged by
                                         Ministry of National Health Services Regulation& Coordination held at MCH PIMS,
                                         9th May 2022.</p>
-                                    {{--<a href="#" class="primary-button">View Event</a>--}}
+                                    <a href="#" class="primary-button">View Event</a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +89,7 @@
                                     <p class="lead">International Women's Day was marked by the Launch of National
                                         Gender Policy Framework. Ministry of Planning Development & Special Initiatives
                                         arranged the event.</p>
-                                    {{--<a href="#" class="primary-button">View Event</a>--}}
+                                    <a href="#" class="primary-button">View Event</a>
                                 </div>
                             </div>
                         </div>
@@ -77,13 +108,14 @@
                                     <p class="lead">The event was graced by Iftikhar Shallwani Special Secretary M/o
                                         MHSRC@Shallwani DG Sabina Durrani PPW, Dr Mohamed Afifi Regional Director , and
                                         health professionals from all provinces.</p>
-                                    {{--<a href="#" class="primary-button">View Event</a>--}}
+                                    <a href="#" class="primary-button">View Event</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            --}}
 
         </div>
     </header>

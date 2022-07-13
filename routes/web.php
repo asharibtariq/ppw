@@ -33,6 +33,9 @@ Route::get('single_blog', function () {
     return view('single_blog');
 });
 
+// Route::get('sitemap.xml', 'SitemapController@index')->name('sitemapxml');
+Route::get('sitemap.xml', [App\Http\Controllers\SitemapController::class, 'index'])->name('sitemapxml');
+
 Auth::routes();
 Route::post('ajax_content', [\App\Http\Controllers\AjaxController::class, 'content']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

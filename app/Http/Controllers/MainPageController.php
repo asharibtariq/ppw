@@ -20,6 +20,7 @@ class MainPageController extends Controller{
 //        $data['news'] = News::all()->sortByDesc('id')->where('status','=','Y');
         $data['news'] = News::orderBy('id', 'desc')->take(6)->where('status','=','Y')->get();
         $data['event'] = Event::orderBy('id', 'desc')->take(4)->where('status','=','Y')->get();
+        $data['carousel_event'] = Event::orderBy('id', 'desc')->take(3)->where('status','=','Y')->get();
 //        $data['event'] = Event::all()->where('status','=','Y');
         return view('index', $data)->with('title', 'PPW Home');
     }
