@@ -203,6 +203,32 @@ class AjaxController extends Controller{
                 $data['links'] = $gallery;
                 return view('adminpanel.gallery.gallery_list')->with($data);
                 break;
+            case 'press_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_press.title'] = $title;
+                */
+                $press = DB::table('tbl_press')
+                    ->select('tbl_press.id',
+                        'tbl_press.title',
+                        'tbl_press.description',
+                        'tbl_press.author',
+                        'tbl_press.document',
+                        'tbl_press.status',
+                        'tbl_press.created_at',
+                        'tbl_press.updated_at')
+                //    ->where('title', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_press.id')
+                    ->orderBy('tbl_press.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $press->items();
+                $data['links'] = $press;
+                return view('adminpanel.press.press_list')->with($data);
+                break;
             default:
                 break;
         }

@@ -17,6 +17,7 @@ $user_menu = user_menu();
 <a href="{{ url('team') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Teams <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
 <a href="{{ url('publication') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Publications <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
 <a href="{{ url('training') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Trainings <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="{{ url('press') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Press Release <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
 <a href="javascript:;" data-toggle="collapse" data-target="#gallery-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Gallery <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
 <div id="gallery-menu" class="collapse left-bar-main-collapse">
     <a class="left-bar-submenu" href="{{ url('gallery') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Gallery List</a>

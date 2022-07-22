@@ -24,6 +24,7 @@ Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class
 Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
 Route::get('publication_details', [\App\Http\Controllers\MainPageController::class, 'publication_details']);
 Route::get('training_details', [\App\Http\Controllers\MainPageController::class, 'training_details']);
+Route::get('press_details', [\App\Http\Controllers\MainPageController::class, 'press_details']);
 Route::get('picture_gallery', [\App\Http\Controllers\MainPageController::class, 'picture_gallery']);
 Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
@@ -104,6 +105,15 @@ Route::get('gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'sho
 Route::get('edit_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'edit']);
 Route::post('update_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'update']);
 Route::get('delete_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'destroy']);
+
+// Press Routes
+Route::get('press', [\App\Http\Controllers\PressController::class, 'index']);
+Route::get('add_press', [\App\Http\Controllers\PressController::class, 'create']);
+Route::post('add_press', [\App\Http\Controllers\PressController::class, 'store']);
+Route::get('press/{id}', [\App\Http\Controllers\PressController::class, 'show']);
+Route::get('edit_press/{id}', [\App\Http\Controllers\PressController::class, 'edit']);
+Route::post('update_press/{id}', [\App\Http\Controllers\PressController::class, 'update']);
+Route::get('delete_press/{id}', [\App\Http\Controllers\PressController::class, 'destroy']);
 
 // Static Pages
 

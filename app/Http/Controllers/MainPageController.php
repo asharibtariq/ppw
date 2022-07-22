@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\Team;
 use App\Models\Training;
 use App\Models\Publication;
+use App\Models\Press;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
@@ -59,6 +60,14 @@ class MainPageController extends Controller{
 //        $date = date("d-m-Y");
         $data['training'] = Training::orderBy('id', 'desc')->get();
         return view('pages/training_details', $data)->with('title', 'Training Details');
+    }
+
+    public function press_details(){
+        $data['result'] = array();
+//        $data['result'] = Press::findOrFail($id);
+//        $date = date("d-m-Y");
+        $data['press'] = Press::orderBy('id', 'desc')->get();
+        return view('pages/press_details', $data)->with('title', 'Press Release Details');
     }
 
     public function picture_gallery(){
