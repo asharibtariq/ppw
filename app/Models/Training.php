@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Publication extends Model{
+class Training extends Model{
     use HasFactory;
-    protected $table = "tbl_publication";
+    protected $table = "tbl_training";
     protected $fillable = [
         'title',
         'description',
@@ -16,5 +16,5 @@ class Publication extends Model{
         'status',
         'created_by',
         'updated_by'
-        ];
+    ];
 }

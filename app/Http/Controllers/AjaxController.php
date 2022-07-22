@@ -131,7 +131,7 @@ class AjaxController extends Controller{
                 $per_page = $request->select_limit != '' ? $request->select_limit : 10;
                 /*
                     if (!empty($title))
-                        $where['tbl_news.title'] = $title;
+                        $where['tbl_publication.title'] = $title;
                 */
                 $publication = DB::table('tbl_publication')
                     ->select('tbl_publication.id',
@@ -150,6 +150,58 @@ class AjaxController extends Controller{
                 $data['result'] = $publication->items();
                 $data['links'] = $publication;
                 return view('adminpanel.publication.publication_list')->with($data);
+                break;
+            case 'training_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_training.title'] = $title;
+                */
+                $training = DB::table('tbl_training')
+                    ->select('tbl_training.id',
+                        'tbl_training.title',
+                        'tbl_training.description',
+                        'tbl_training.author',
+                        'tbl_training.document',
+                        'tbl_training.status',
+                        'tbl_training.created_at',
+                        'tbl_training.updated_at')
+                    ->where('title', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_training.id')
+                    ->orderBy('tbl_training.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $training->items();
+                $data['links'] = $training;
+                return view('adminpanel.training.training_list')->with($data);
+                break;
+            case 'gallery_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_gallery.title'] = $title;
+                */
+                $gallery = DB::table('tbl_gallery')
+                    ->select('tbl_gallery.id',
+                        'tbl_gallery.title',
+                        'tbl_gallery.description',
+                        'tbl_gallery.author',
+                        'tbl_gallery.image',
+                        'tbl_gallery.status',
+                        'tbl_gallery.created_at',
+                        'tbl_gallery.updated_at')
+                //    ->where('title', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_gallery.id')
+                    ->orderBy('tbl_gallery.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $gallery->items();
+                $data['links'] = $gallery;
+                return view('adminpanel.gallery.gallery_list')->with($data);
                 break;
             default:
                 break;

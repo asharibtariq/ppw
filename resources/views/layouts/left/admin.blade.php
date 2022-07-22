@@ -12,23 +12,13 @@ $user_menu = user_menu();
 -->
 <a href="{{ url('home') }}" class="list-group-item-action-main"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
 <a href="{{ url('news') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> News <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
-<a href="javascript:;" data-toggle="collapse" data-target="#events-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Events <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div id="events-menu" class="collapse left-bar-main-collapse">
-    <a class="left-bar-submenu" href="{{ url('event') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Events</a>
-    <a class="left-bar-submenu" href="{{ url('add_event') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Event</a>
-</div>
-<a href="javascript:;" data-toggle="collapse" data-target="#contacts-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Contacts <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div id="contacts-menu" class="collapse left-bar-main-collapse">
-    <a class="left-bar-submenu" href="{{ url('contact') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Contacts</a>
-    <a class="left-bar-submenu" href="{{ url('add_contact') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Contact</a>
-</div>
-<a href="javascript:;" data-toggle="collapse" data-target="#teams-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Teams <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div id="teams-menu" class="collapse left-bar-main-collapse">
-    <a class="left-bar-submenu" href="{{ url('team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Teams</a>
-    <a class="left-bar-submenu" href="{{ url('add_team') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Teams</a>
-</div>
-<a href="javascript:;" data-toggle="collapse" data-target="#publication-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Publications <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div id="publication-menu" class="collapse left-bar-main-collapse">
-    <a class="left-bar-submenu" href="{{ url('publication') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Publication</a>
-    <a class="left-bar-submenu" href="{{ url('add_publication') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Publication</a>
+<a href="{{ url('event') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Events <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="{{ url('contact') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Contacts <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="{{ url('team') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Teams <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="{{ url('publication') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Publications <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="{{ url('training') }}" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Trainings <!-- <i class="fa fa-angle-down" aria-hidden="true"></i> --></a>
+<a href="javascript:;" data-toggle="collapse" data-target="#gallery-menu" class="list-group-item-action-main"><i class="fa fa-database" aria-hidden="true"></i> Gallery <i style="float: right;margin-right: 0;" class="fa fa-angle-down" aria-hidden="true"></i></a>
+<div id="gallery-menu" class="collapse left-bar-main-collapse">
+    <a class="left-bar-submenu" href="{{ url('gallery') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Gallery List</a>
+    <a class="left-bar-submenu" href="{{ url('add_gallery') }}"><i class="fa fa-medkit" aria-hidden="true"></i> Add Image</a>
 </div>

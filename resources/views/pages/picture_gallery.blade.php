@@ -1,17 +1,6 @@
 @extends('main_layouts.app')
 @section('main_content')
 
-
-
-
-
-
-
-
-
-
-
-
     <style>
         .row > .column {
             padding: 0 8px;
@@ -118,23 +107,6 @@
         }
     </style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div id="page-header">
         <div class="section-bg" style="background-image:url(img/background-2.jpg)"></div>
         <div class="container">
@@ -156,22 +128,6 @@
         <div class="container">
             <div class="row">
 
-                {{--
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="article-img">
-                            <a href="{{asset('img/dg5.jpeg')}}">
-                                <img src="{{asset('img/dg5.jpeg')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title"><a href="#"></a>DR. Sabina Imran Durrani</h3>
-                            <p>Direcor General Population Program Wing</p>
-                        </div>
-                    </div>
-                </div>
-                --}}
-
                 <div class="col-md-12">
                     <div class="article">
                         <div class="article-content">
@@ -181,41 +137,56 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="col-md-12">
                     <!-- Images used to open the lightbox -->
                     <div class="row">
+
+                        @php
+                            $gallery = json_decode($gallery)
+                        @endphp
+                        <?php
+                        if (!empty($gallery)){
+                        $total_count = count($gallery);
+                        $slide_count = 1;
+                        foreach ($gallery as $gallery_row){
+                        ?>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_01.jpg')}}" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                            <img src="{{asset('uploads/gallery/'.$gallery_row->image)}}" onclick="openModal();currentSlide({{$slide_count}})"
+                                 class="hover-shadow">
+                        </div>
+                        <?php
+                        $slide_count++;
+                        }
+                        }
+                        ?>
+
+                        {{--
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <img src="{{asset('img/pic_gal_01.jpg')}}" onclick="openModal();currentSlide(1)"
+                                 class="hover-shadow">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_03.jpg')}}" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                            <img src="{{asset('img/pic_gal_03.jpg')}}" onclick="openModal();currentSlide(2)"
+                                 class="hover-shadow">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_07.jpg')}}" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                            <img src="{{asset('img/pic_gal_07.jpg')}}" onclick="openModal();currentSlide(3)"
+                                 class="hover-shadow">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_08.jpg')}}" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                            <img src="{{asset('img/pic_gal_08.jpg')}}" onclick="openModal();currentSlide(4)"
+                                 class="hover-shadow">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_09.jpg')}}" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                            <img src="{{asset('img/pic_gal_09.jpg')}}" onclick="openModal();currentSlide(5)"
+                                 class="hover-shadow">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <img src="{{asset('img/pic_gal_10.jpg')}}" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                            <img src="{{asset('img/pic_gal_10.jpg')}}" onclick="openModal();currentSlide(6)"
+                                 class="hover-shadow">
                         </div>
+                        --}}
+
                     </div>
 
                     <!-- The Modal/Lightbox -->
@@ -223,35 +194,50 @@
                         <span class="close cursor" onclick="closeModal()">&times;</span>
                         <div class="modal-content">
 
+                            <?php
+                            if (!empty($gallery)){
+                            $total_count = count($gallery);
+                            $slide_count = 1;
+                            foreach ($gallery as $gallery_row){
+                            ?>
+
+                            <div class="gallerySlides">
+                                <div class="numbertext">{{$slide_count}} / {{$total_count}}</div>
+                                <img src="{{asset('uploads/gallery/'.$gallery_row->image)}}" style="width:100%">
+                            </div>
+
+                            <?php
+                            $slide_count++;
+                            }
+                            }
+                            ?>
+
+                            {{--
                             <div class="gallerySlides">
                                 <div class="numbertext">1 / 6</div>
                                 <img src="{{asset('img/pic_gal_01.jpg')}}" style="width:100%">
                             </div>
-
                             <div class="gallerySlides">
                                 <div class="numbertext">2 / 6</div>
                                 <img src="{{asset('img/pic_gal_03.jpg')}}" style="width:100%">
                             </div>
-
                             <div class="gallerySlides">
                                 <div class="numbertext">3 / 6</div>
                                 <img src="{{asset('img/pic_gal_07.jpg')}}" style="width:100%">
                             </div>
-
                             <div class="gallerySlides">
                                 <div class="numbertext">4 / 6</div>
                                 <img src="{{asset('img/pic_gal_08.jpg')}}" style="width:100%">
                             </div>
-
                             <div class="gallerySlides">
                                 <div class="numbertext">5 / 6</div>
                                 <img src="{{asset('img/pic_gal_09.jpg')}}" style="width:100%">
                             </div>
-
                             <div class="gallerySlides">
                                 <div class="numbertext">6 / 6</div>
                                 <img src="{{asset('img/pic_gal_10.jpg')}}" style="width:100%">
                             </div>
+                            --}}
 
                             <!-- Next/previous controls -->
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -282,163 +268,9 @@
                     </div>
                     <br/>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                {{--
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_01.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_01.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_03.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_03.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_04.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_04.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_06.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_06.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_07.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_07.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_08.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_08.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_09.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_09.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_10.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_10.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_11.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_11.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_14.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_14.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="article">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_12.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_12.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="article-img">
-                                    <a href="{{asset('img/pic_gal_13.jpg')}}">
-                                        <img src="{{asset('img/pic_gal_13.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                --}}
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
         // Open the Modal
@@ -464,30 +296,22 @@
             var slides = document.getElementsByClassName("gallerySlides");
             var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
 
 @endsection

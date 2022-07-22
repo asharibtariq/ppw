@@ -23,6 +23,8 @@ Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
 Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class, 'news_details']);
 Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
 Route::get('publication_details', [\App\Http\Controllers\MainPageController::class, 'publication_details']);
+Route::get('training_details', [\App\Http\Controllers\MainPageController::class, 'training_details']);
+Route::get('picture_gallery', [\App\Http\Controllers\MainPageController::class, 'picture_gallery']);
 Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
 Route::get('blog', function () {
@@ -85,6 +87,24 @@ Route::get('edit_publication/{id}', [\App\Http\Controllers\PublicationController
 Route::post('update_publication/{id}', [\App\Http\Controllers\PublicationController::class, 'update']);
 Route::get('delete_publication/{id}', [\App\Http\Controllers\PublicationController::class, 'destroy']);
 
+// Training Routes
+Route::get('training', [\App\Http\Controllers\TrainingController::class, 'index']);
+Route::get('add_training', [\App\Http\Controllers\TrainingController::class, 'create']);
+Route::post('add_training', [\App\Http\Controllers\TrainingController::class, 'store']);
+Route::get('training/{id}', [\App\Http\Controllers\TrainingController::class, 'show']);
+Route::get('edit_training/{id}', [\App\Http\Controllers\TrainingController::class, 'edit']);
+Route::post('update_training/{id}', [\App\Http\Controllers\TrainingController::class, 'update']);
+Route::get('delete_training/{id}', [\App\Http\Controllers\TrainingController::class, 'destroy']);
+
+// Gallery Routes
+Route::get('gallery', [\App\Http\Controllers\GalleryController::class, 'index']);
+Route::get('add_gallery', [\App\Http\Controllers\GalleryController::class, 'create']);
+Route::post('add_gallery', [\App\Http\Controllers\GalleryController::class, 'store']);
+Route::get('gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'show']);
+Route::get('edit_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'edit']);
+Route::post('update_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'update']);
+Route::get('delete_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'destroy']);
+
 // Static Pages
 
 Route::get('national_action_plan', function () {
@@ -105,9 +125,11 @@ Route::get('about', function () {
 Route::get('media', function () {
     return view('pages/media');
 });
+/*
 Route::get('picture_gallery', function () {
     return view('pages/picture_gallery');
 });
+*/
 Route::get('videos', function () {
     return view('pages/videos');
 });

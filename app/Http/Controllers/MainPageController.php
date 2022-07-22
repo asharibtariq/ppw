@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Publication;
-use Illuminate\Http\Request;
-use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use App\Models\News;
 use App\Models\Event;
+use App\Models\Team;
+use App\Models\Training;
+use App\Models\Publication;
+use App\Models\Gallery;
+use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
 
 class MainPageController extends Controller{
 
@@ -21,6 +24,7 @@ class MainPageController extends Controller{
         $data['news'] = News::orderBy('id', 'desc')->take(6)->where('status','=','Y')->get();
         $data['event'] = Event::orderBy('id', 'desc')->take(4)->where('status','=','Y')->get();
         $data['carousel_event'] = Event::orderBy('id', 'desc')->take(3)->where('status','=','Y')->get();
+        $data['team'] = Team::orderBy('id', 'desc')->where('status','=','Y')->get();
 //        $data['event'] = Event::all()->where('status','=','Y');
         return view('index', $data)->with('title', 'PPW Home');
     }
@@ -47,6 +51,22 @@ class MainPageController extends Controller{
 //        $date = date("d-m-Y");
         $data['publication'] = Publication::orderBy('id', 'desc')->get();
         return view('pages/publication_details', $data)->with('title', 'Event Details');
+    }
+
+    public function training_details(){
+        $data['result'] = array();
+//        $data['result'] = Training::findOrFail($id);
+//        $date = date("d-m-Y");
+        $data['training'] = Training::orderBy('id', 'desc')->get();
+        return view('pages/training_details', $data)->with('title', 'Training Details');
+    }
+
+    public function picture_gallery(){
+        $data['result'] = array();
+//        $data['result'] = Gallery::findOrFail($id);
+//        $date = date("d-m-Y");
+        $data['gallery'] = Gallery::orderBy('id', 'desc')->get();
+        return view('pages/picture_gallery', $data)->with('title', 'Gallery');
     }
 
     public function contact_add(ContactRequest $request){

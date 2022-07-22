@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Publication;
-use App\Http\Controllers\Controller;
+use App\Models\Training;
 use Illuminate\Http\Request;
+use App\Http\Requests\TrainingRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 
-class PublicationController extends Controller{
+class TrainingController extends Controller{
 
     public function __construct(){
         $this->middleware('auth');
@@ -19,8 +18,8 @@ class PublicationController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $title = "Publication";
-        return view('adminpanel.publication.publication')->with('title', $title);
+        $title = "Training";
+        return view('adminpanel.training.training')->with('title', $title);
     }
 
     /**
@@ -29,8 +28,8 @@ class PublicationController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        $title = "Add Publication";
-        return view('adminpanel.publication.add_publication')->with('title', $title);
+        $title = "Add Training";
+        return view('adminpanel.training.add_training')->with('title', $title);
     }
 
     /**
@@ -39,91 +38,91 @@ class PublicationController extends Controller{
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(TrainingRequest $request){
         $userId = Auth::id();
         $insertData = $request->all();
-        //    $insertData['slug'] = strtolower(str_replace(' ','_',$insertData['title']));
+    //    $insertData['slug'] = strtolower(str_replace(' ','_',$insertData['title']));
         $insertData['created_by'] = $userId;
         $insertData['updated_by'] = $userId;
         //    pre($request->all(),1);
         if ($request->hasFile('document')){
             $file = $request->document;
             $extension = $file->getClientOriginalExtension();
-            $documentName = 'publication_'.time().'.'.$extension;
+            $documentName = 'training_'.time().'.'.$extension;
 
-            $destinationPath = public_path('/uploads/publication');
+            $destinationPath = public_path('/uploads/training');
             $file->move($destinationPath, $documentName);
             $insertData['document'] = $documentName;
         }
-        Publication::create($insertData);
-        return redirect('publication')->with('success', 'Publication Added Successfully');
+        Training::create($insertData);
+        return redirect('training')->with('success', 'Training Added Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Publication  $publication
+     * @param  \App\Models\Training  $training
      * @return \Illuminate\Http\Response
      */
-    public function show(Publication $publication){
+    public function show(Training $training){
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Publication  $publication
+     * @param  \App\Models\Training  $training
      * @return \Illuminate\Http\Response
      */
     public function edit($id){
-        $publication = Publication::findOrFail($id);
-        $title = "Edit Publication";
-        $data['publication'] = $publication;
-        return view('adminpanel.publication.edit_publication', $data)->with('title', $title);
+        $training = Training::findOrFail($id);
+        $title = "Edit Training";
+        $data['training'] = $training;
+        return view('adminpanel.training.edit_training', $data)->with('title', $title);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Publication  $publication
+     * @param  \App\Models\Training  $training
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
+    public function update(TrainingRequest $request, $id){
         $userId = Auth::id();
-        $publication = Publication::findOrFail($id);
+        $training = Training::findOrFail($id);
         $updateData = $request->all();
     //    $updateData['slug'] = strtolower(str_replace(' ','_',$updateData['title']));
         $updateData['updated_by'] = $userId;
     //    pre($request->all(),1);
         if ($request->hasFile('document')){
-            File::delete($publication->document);
+            File::delete($training->document);
             //    $files = array($news->image);
             //    File::delete($files);
             $file = $request->document;
             $extension = $file->getClientOriginalExtension();
-            $documentName = 'publication_'.time().'.'.$extension;
+            $documentName = 'training_'.time().'.'.$extension;
 
-            $destinationPath = public_path('/uploads/publication');
+            $destinationPath = public_path('/uploads/training');
             $file->move($destinationPath, $documentName);
             $updateData['document'] = $documentName;
         }else{
-            $updateData['document'] = $publication->document;
+            $updateData['document'] = $training->document;
         }
-        $publication->update($updateData);
-        return redirect('publication')->with('success', 'Publication Updated Successfully');
+        $training->update($updateData);
+        return redirect('training')->with('success', 'Training Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Publication  $publication
+     * @param  \App\Models\Training  $training
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
-        $publication = Publication::findOrFail($id);
-        File::delete($publication->document);
-        $publication->delete();
-        return redirect('publication')->with('success', 'Publication Successfully Deleted');
+        $training = Training::findOrFail($id);
+        File::delete($training->document);
+        $training->delete();
+        return redirect('training')->with('success', 'Training Successfully Deleted');
     }
 }

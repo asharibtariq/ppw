@@ -45,7 +45,7 @@
             <li class="has-dropdown"><a href="#">Media Centre</a>
                 <ul class="dropdown">
                     <li><a href="{{url('media')}}">Press Releases</a></li>
-                    {{--<li><a href="#">Training Material</a></li>--}}
+                    <li><a href="{{url('training_details')}}">Training Material</a></li>
                     <li><a href="{{url('publication_details')}}">Publication</a></li>
                     <li><a href="{{url('picture_gallery')}}">Picture Gallery</a></li>
                     <li><a href="{{url('videos')}}">Videos</a></li>

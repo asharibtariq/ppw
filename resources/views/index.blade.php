@@ -354,70 +354,46 @@
                 <div class="col-md-12">
                     <div id="testimonial-owl" class="owl-carousel owl-theme">
 
+                        @php
+                            $team = json_decode($team)
+                        @endphp
+                        <?php
+                        if (!empty($team)){
+                        foreach ($team as $team_row){
+                        $team_description = strlen($team_row->description) > 110 ? substr($team_row->description, 0, 110) . "..." : $team_row->description;
+                        ?>
+
                         <div class="testimonial">
                             <div class="testimonial-meta">
                                 <div class="testimonial-img">
-                                    <img src="{{asset('img/dg2.jpg')}}" alt="">
+                                    <img src="{{asset('uploads/team/'.$team_row->image)}}" alt="">
+                                </div>
+                                <h3>{{$team_row->name}}</h3>
+                                <span style="text-shadow: 2px 2px 2px black; font-size: medium;">{{$team_row->designation}}</span>
+                            </div>
+                            <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+                                <p>{{$team_description}}</p>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        }
+                        ?>
+
+                        {{--
+                        <div class="testimonial">
+                            <div class="testimonial-meta">
+                                <div class="testimonial-img">
+                                    <img src="{{asset('uploads/team/dg2.jpg')}}" alt="">
                                 </div>
                                 <h3>DR. SABINA IMRAN DURRANI</h3>
                                 <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
                             </div>
-                            <div style="background-color:white; border-radius: 10px; padding: 25px"
-                                 class="testimonial-quote">
-
-                                <p>Currently working as a Director General in Population Program Wing of Ministry of
-                                    NHSRC, Islamabad, Pakistan.</p>
-
+                            <div style="background-color:white; border-radius: 10px; padding: 25px" class="testimonial-quote">
+                                <p>Currently working as a Director General in Population Program Wing of Ministry of NHSRC, Islamabad, Pakistan.</p>
                             </div>
                         </div>
-                        <div class="testimonial">
-                            <div class="testimonial-meta">
-                                <div class="testimonial-img">
-                                    <img src="{{asset('img/dg2.jpg')}}" alt="">
-                                </div>
-                                <h3>DR. SABINA IMRAN DURRANI</h3>
-                                <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
-                            </div>
-                            <div style="background-color:white; border-radius: 10px; padding: 25px"
-                                 class="testimonial-quote">
-
-                                <p>Currently working as a Director General in Population Program Wing of Ministry of
-                                    NHSRC, Islamabad, Pakistan.</p>
-
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial-meta">
-                                <div class="testimonial-img">
-                                    <img src="{{asset('img/dg2.jpg')}}" alt="">
-                                </div>
-                                <h3>DR. SABINA IMRAN DURRANI</h3>
-                                <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
-                            </div>
-                            <div style="background-color:white; border-radius: 10px; padding: 25px"
-                                 class="testimonial-quote">
-
-                                <p>Currently working as a Director General in Population Program Wing of Ministry of
-                                    NHSRC, Islamabad, Pakistan.</p>
-
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="testimonial-meta">
-                                <div class="testimonial-img">
-                                    <img src="{{asset('img/dg2.jpg')}}" alt="">
-                                </div>
-                                <h3>DR. SABINA IMRAN DURRANI</h3>
-                                <span style="text-shadow: 2px 2px 2px black; font-size: medium;">DG POPULATION</span>
-                            </div>
-                            <div style="background-color:white; border-radius: 10px; padding: 25px"
-                                 class="testimonial-quote">
-
-                                <p>Currently working as a Director General in Population Program Wing of Ministry of
-                                    NHSRC, Islamabad, Pakistan.</p>
-
-                            </div>
-                        </div>
+                        --}}
 
                     </div>
                 </div>

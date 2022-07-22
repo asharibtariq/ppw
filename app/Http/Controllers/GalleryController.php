@@ -2,27 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Team;
-use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Http\Requests\GalleryRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\TeamRequest;
 use Illuminate\Support\Facades\File;
 
-class TeamController extends Controller
-{
+class GalleryController extends Controller{
+
     public function __construct(){
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $title = "Teams";
-        return view('adminpanel.team.team')->with('title', $title);
+    public function index(){
+        $title = "Gallery";
+        return view('adminpanel.gallery.gallery')->with('title', $title);
     }
 
     /**
@@ -30,10 +29,9 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $title = "Add Team";
-        return view('adminpanel.team.add_team')->with('title', $title);
+    public function create(){
+        $title = "Add Gallery";
+        return view('adminpanel.gallery.add_gallery')->with('title', $title);
     }
 
     /**
@@ -42,8 +40,7 @@ class TeamController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TeamRequest $request)
-    {
+    public function store(GalleryRequest $request){
         $userId = Auth::id();
         $insertData = $request->all();
     //    $insertData['slug'] = strtolower(str_replace(' ','_',$insertData['title']));
@@ -53,85 +50,81 @@ class TeamController extends Controller
         if ($request->hasFile('image')){
             $file = $request->image;
             $extension = $file->getClientOriginalExtension();
-            $imageName = 'team_'.time().'.'.$extension;
+            $imageName = 'gallery_'.time().'.'.$extension;
 
-            $destinationPath = public_path('/uploads/team');
+            $destinationPath = public_path('/uploads/gallery');
             $file->move($destinationPath, $imageName);
             $insertData['image'] = $imageName;
         }
-        Team::create($insertData);
-        return redirect('team')->with('success', 'Team Added Successfully');
+        Gallery::create($insertData);
+        return redirect('gallery')->with('success', 'Gallery Image Added Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function show(Team $team)
-    {
+    public function show(Gallery $gallery){
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $team = Team::findOrFail($id);
-        $title = "Edit Team";
-        $data['team'] = $team;
-        return view('adminpanel.team.edit_team', $data)->with('title', $title);
+    public function edit($id){
+        $gallery = Gallery::findOrFail($id);
+        $title = "Edit Gallery";
+        $data['gallery'] = $gallery;
+        return view('adminpanel.gallery.edit_gallery', $data)->with('title', $title);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function update(TeamRequest $request, $id)
-    {
+    public function update(GalleryRequest $request, $id){
         $userId = Auth::id();
-        $team = Team::findOrFail($id);
+        $gallery = Gallery::findOrFail($id);
         $updateData = $request->all();
-        //    $updateData['slug'] = strtolower(str_replace(' ','_',$updateData['title']));
+    //    $updateData['slug'] = strtolower(str_replace(' ','_',$updateData['title']));
         $updateData['updated_by'] = $userId;
-        //    pre($request->all(),1);
+    //    pre($request->all(),1);
         if ($request->hasFile('image')){
-            File::delete($team->image);
-            //    $files = array($team->image);
+            File::delete($gallery->image);
+            //    $files = array($event->image);
             //    File::delete($files);
             $file = $request->image;
             $extension = $file->getClientOriginalExtension();
-            $imageName = 'team_'.time().'.'.$extension;
+            $imageName = 'gallery_'.time().'.'.$extension;
 
-            $destinationPath = public_path('/uploads/team');
+            $destinationPath = public_path('/uploads/gallery');
             $file->move($destinationPath, $imageName);
             $updateData['image'] = $imageName;
         }else{
-            $updateData['image'] = $team->image;
+            $updateData['image'] = $gallery->image;
         }
-        $team->update($updateData);
-        return redirect('team')->with('success', 'Team Updated Successfully');
+        $gallery->update($updateData);
+        return redirect('gallery')->with('success', 'Gallery Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $team = Team::findOrFail($id);
-        File::delete($team->image);
-        $team->delete();
-        return redirect('team')->with('success', 'Team Successfully Deleted');
+    public function destroy($id){
+        $gallery = Gallery::findOrFail($id);
+        File::delete($gallery->image);
+        $gallery->delete();
+        return redirect('gallery')->with('success', 'Gallery Successfully Deleted');
     }
 }

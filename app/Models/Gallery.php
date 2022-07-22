@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Publication extends Model{
+class Gallery extends Model{
     use HasFactory;
-    protected $table = "tbl_publication";
+    protected $table = "tbl_gallery";
     protected $fillable = [
         'title',
         'description',
         'author',
-        'document',
+        'image',
         'status',
         'created_by',
         'updated_by'
-        ];
+    ];
 }

@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Add Publication</h4>
+                        <h4>Add Training</h4>
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -16,7 +16,7 @@
                             @endforeach
                         @endif
 
-                        <form name="" method="post" action="{{url('add_publication')}}" enctype="multipart/form-data">
+                        <form name="" method="post" action="{{url('add_training')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-4">
