@@ -49,7 +49,8 @@
                     <li><a href="{{url('training_details')}}">Training Material</a></li>
                     <li><a href="{{url('publication_details')}}">Publication</a></li>
                     <li><a href="{{url('picture_gallery')}}">Picture Gallery</a></li>
-                    <li><a href="{{url('videos')}}">Videos</a></li>
+                    <li><a href="{{url('video_gallery')}}">Videos</a></li>
+                    {{--<li><a href="{{url('videos')}}">Videos</a></li>--}}
                 </ul>
             </li>
             <li><a href="{{url('')}}#contact">Contact</a></li>

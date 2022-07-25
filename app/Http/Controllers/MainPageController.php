@@ -10,6 +10,7 @@ use App\Models\Training;
 use App\Models\Publication;
 use App\Models\Press;
 use App\Models\Gallery;
+use App\Models\Video;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 
@@ -76,6 +77,14 @@ class MainPageController extends Controller{
 //        $date = date("d-m-Y");
         $data['gallery'] = Gallery::orderBy('id', 'desc')->get();
         return view('pages/picture_gallery', $data)->with('title', 'Gallery');
+    }
+
+    public function video_gallery(){
+        $data['result'] = array();
+//        $data['result'] = Video::findOrFail($id);
+//        $date = date("d-m-Y");
+        $data['video'] = Video::orderBy('id', 'desc')->get();
+        return view('pages/video_gallery', $data)->with('title', 'Videos');
     }
 
     public function contact_add(ContactRequest $request){

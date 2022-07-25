@@ -26,6 +26,7 @@ Route::get('publication_details', [\App\Http\Controllers\MainPageController::cla
 Route::get('training_details', [\App\Http\Controllers\MainPageController::class, 'training_details']);
 Route::get('press_details', [\App\Http\Controllers\MainPageController::class, 'press_details']);
 Route::get('picture_gallery', [\App\Http\Controllers\MainPageController::class, 'picture_gallery']);
+Route::get('video_gallery', [\App\Http\Controllers\MainPageController::class, 'video_gallery']);
 Route::post('contact_add', [\App\Http\Controllers\MainPageController::class, 'contact_add'])->name('contact_add');
 
 Route::get('blog', function () {
@@ -105,6 +106,15 @@ Route::get('gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'sho
 Route::get('edit_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'edit']);
 Route::post('update_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'update']);
 Route::get('delete_gallery/{id}', [\App\Http\Controllers\GalleryController::class, 'destroy']);
+
+// Video Routes
+Route::get('video', [\App\Http\Controllers\VideoController::class, 'index']);
+Route::get('add_video', [\App\Http\Controllers\VideoController::class, 'create']);
+Route::post('add_video', [\App\Http\Controllers\VideoController::class, 'store']);
+Route::get('video/{id}', [\App\Http\Controllers\VideoController::class, 'show']);
+Route::get('edit_video/{id}', [\App\Http\Controllers\VideoController::class, 'edit']);
+Route::post('update_video/{id}', [\App\Http\Controllers\VideoController::class, 'update']);
+Route::get('delete_video/{id}', [\App\Http\Controllers\VideoController::class, 'destroy']);
 
 // Press Routes
 Route::get('press', [\App\Http\Controllers\PressController::class, 'index']);

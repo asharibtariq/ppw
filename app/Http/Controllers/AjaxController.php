@@ -203,6 +203,32 @@ class AjaxController extends Controller{
                 $data['links'] = $gallery;
                 return view('adminpanel.gallery.gallery_list')->with($data);
                 break;
+            case 'video_content':
+                $where = array();
+                $title = $request->title != '' ? $request->title : '';
+                $per_page = $request->select_limit != '' ? $request->select_limit : 10;
+                /*
+                    if (!empty($title))
+                        $where['tbl_video.title'] = $title;
+                */
+                $gallery = DB::table('tbl_video')
+                    ->select('tbl_video.id',
+                        'tbl_video.title',
+                        'tbl_video.description',
+                        'tbl_video.author',
+                        'tbl_video.video',
+                        'tbl_video.status',
+                        'tbl_video.created_at',
+                        'tbl_video.updated_at')
+                //    ->where('title', 'LIKE', '%' . $title . '%')
+                //    ->groupBy('tbl_video.id')
+                    ->orderBy('tbl_video.id', 'DESC')
+                    ->paginate($per_page);
+
+                $data['result'] = $gallery->items();
+                $data['links'] = $gallery;
+                return view('adminpanel.video.video_list')->with($data);
+                break;
             case 'press_content':
                 $where = array();
                 $title = $request->title != '' ? $request->title : '';
