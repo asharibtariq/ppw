@@ -63,7 +63,7 @@ min-height: 315px}
 
 
                                 <a href="{{asset('uploads/publication/'.$publication_row->document)}}"
-                                   class="primary-button" target="_blank">Download pdf</a>
+                                   class="primary-button" target="_blank">Download</a>
                             </div>
                             <?php
                             $i++;

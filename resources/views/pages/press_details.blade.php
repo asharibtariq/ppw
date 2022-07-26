@@ -62,7 +62,7 @@ min-height: 315px}
                                     <p style="font-size: small">{{$press_description}}</p>
                                 
                                 <a href="{{asset('uploads/press/'.$press_row->document)}}"
-                                   class="primary-button" target="_blank">Download pdf</a>
+                                   class="primary-button" target="_blank">Download</a>
                             </div>
                             <?php
                             $i++;
