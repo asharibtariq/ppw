@@ -85,7 +85,7 @@
                                         <input type="text"
                                                name="date"
                                                id="date"
-                                               class="form-control input-paf"
+                                               class="form-control input-paf datepicker"
                                                value="{{ $event->date }}"
                                                placeholder="Date" />
                                         @if ($errors->has('date'))

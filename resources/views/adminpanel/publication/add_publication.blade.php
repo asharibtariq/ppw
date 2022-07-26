@@ -39,7 +39,13 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="label-paf" for="title">Title</label>
-                                        <input type="text" name="title" id="title" class="form-control input-paf" placeholder="#" minlength="3" required />
+                                        <input type="text"
+                                               name="title"
+                                               id="title"
+                                               class="form-control input-paf"
+                                               placeholder="Title"
+                                               minlength="3"
+                                               required />
                                         @if ($errors->has('title'))
                                             <span class="text-danger">{{ $errors->first('title') }}</span>
                                         @endif
@@ -47,17 +53,39 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label class="label-paf" for="date">Date</label>
+                                        <input type="text"
+                                               name="date"
+                                               id="date"
+                                               class="form-control input-paf"
+                                               placeholder="Date"
+                                               minlength="3"
+                                               required />
+                                        @if ($errors->has('date'))
+                                            <span class="text-danger">{{ $errors->first('date') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
                                         <label class="label-paf" for="document">Document</label>
-                                        <input type="file" accept="application/pdf" name="document" id="document" class="btn btn-default">
+                                        <input type="file"
+                                               accept="application/pdf"
+                                               name="document"
+                                               id="document"
+                                               class="btn btn-default">
                                         @if ($errors->has('document'))
                                             <span class="text-danger">{{ $errors->first('document') }}</span>
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label class="label-paf" for="description">Description</label>
-                                        <textarea name="description" id="description" class="form-control input-paf" placeholder="Description"></textarea>
+                                        <textarea name="description"
+                                                  id="description"
+                                                  class="form-control input-paf"
+                                                  placeholder="Description"></textarea>
                                         @if ($errors->has('description'))
                                             <span class="text-danger">{{ $errors->first('description') }}</span>
                                         @endif
@@ -77,5 +105,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#date').datepicker({dateFormat: 'dd-mm-yy'});
+        });
+    </script>
 
 @endsection

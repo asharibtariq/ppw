@@ -52,13 +52,33 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label class="label-paf" for="date">Date</label>
+                                        <input type="text"
+                                               name="date"
+                                               id="date"
+                                               class="form-control input-paf"
+                                               value="{{ $publication->date }}"
+                                               placeholder="Date" />
+                                        @if ($errors->has('date'))
+                                            <span class="text-danger">{{ $errors->first('date') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
                                         <label class="label-paf" for="document">
                                             @if ($publication->document != '')
-                                                <img src="{{asset('uploads/publication/'.$publication->document)}}" width="50" />
+                                                <a href="{{asset('uploads/publication/'.$publication->document)}}" target="_blank">
+                                                    <img src="{{asset('img/bookicon.png')}}" width="50" />
+                                                </a>
                                             @else
                                                 Document
                                             @endif
-                                            <input type="file" accept="application/pdf" name="document" id="document" class="btn btn-default">
+                                            <input type="file"
+                                                   accept="application/pdf"
+                                                   name="document"
+                                                   id="document"
+                                                   class="btn btn-default">
                                         </label>
                                         @if ($errors->has('document'))
                                             <span class="text-danger">{{ $errors->first('document') }}</span>
@@ -101,5 +121,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#date').datepicker({dateFormat: 'dd-mm-yy'});
+        });
+    </script>
 
 @endsection

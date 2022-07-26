@@ -58,7 +58,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="label-paf" for="date">Date</label>
-                                        <input type="text" name="date" id="date" class="form-control input-paf" placeholder="Date" required />
+                                        <input type="text" name="date" id="date" class="form-control input-paf datepicker" placeholder="Date" required />
                                         @if ($errors->has('date'))
                                             <span class="text-danger">{{ $errors->first('date') }}</span>
                                         @endif

@@ -22,14 +22,14 @@
                 <td> {{$r->description}} </td>
                 <td>
                     @if($r->status == 'Y')
-                        <button type="button" class="btn btn-success">Active</button>
+                        <button type="button" class="btn btn-success btn-sm">Active</button>
                     @elseif($r->status == 'N')
-                        <button type="button" class="btn btn-danger">In-active</button>
+                        <button type="button" class="btn btn-danger btn-sm">In-active</button>
                     @endif
                 </td>
                 <td>
-                    <a onClick="return confirm('Are you sure you want to update?');" href="{{url('edit_publication', $r->id)}}" class="btn btn-info" id="btn-view"><i class="fa fa-edit"></i> Edit</a>
-                    <a onClick="return confirm('Are you sure you want to delete?');" href="{{url('delete_publication', $r->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                    <a onClick="return confirm('Are you sure you want to update?');" href="{{url('edit_publication', $r->id)}}" class="btn btn-info btn-sm" id="btn-view"><i class="fa fa-edit"></i> Edit</a>
+                    <a onClick="return confirm('Are you sure you want to delete?');" href="{{url('delete_publication', $r->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
                 </td>
             </tr>
             @php

@@ -57,7 +57,8 @@
         $(".mobile_no").mask("0000-0000000");
         $(".year_mask").mask("0000");
         $(".cnic").mask("0000000000000");
-        $(".datepicker").datepicker({dateFormat: "mm/dd/yy"});
+    //    $(".datepicker").datepicker({dateFormat: "mm/dd/yy"});
+        $(".datepicker").datepicker({dateFormat: "dd-mm-yy"});
     });
     //for only alphabets
     $(document).on("input", ".only_alpha", function () {
