@@ -24,7 +24,9 @@
                                     <div class="form-group">
                                         <label class="label-paf" for="video">
                                             @if ($video->video != '')
-                                                <img src="{{asset('uploads/video/'.$video->video)}}" width="50" />
+                                                <video src="{{asset('uploads/videos/'.$video->video)}}"
+                                                       width="250px"
+                                                       controls=""></video>
                                             @else
                                                 Video
                                             @endif

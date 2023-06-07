@@ -77,9 +77,11 @@ class VideoController extends Controller{
      * @param  \App\Models\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function edit(Video $video)
-    {
-        //
+    public function edit($id){
+        $video = Video::findOrFail($id);
+        $title = "Edit Video";
+        $data['video'] = $video;
+        return view('adminpanel.video.edit_video', $data)->with('title', $title);
     }
 
     /**
