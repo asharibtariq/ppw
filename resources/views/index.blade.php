@@ -43,7 +43,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8">
-                                <div class="home-content">
+                                <div class="home-content" style="margin: 30px; background-color: #000000; border: 1px solid black; opacity: 0.7;">
                                     <h1>{{$carousel_event_row->title}}</h1>
                                     <p class="lead">{{$carousel_event_description}}</p>
                                     <a href="{{url('event_details', $carousel_event_row->id)}}" class="primary-button">View Event</a>
@@ -139,9 +139,14 @@
                     </div>
                 </div>
                 <div class="col-md-offset-1 col-md-6">
-                    <a href="{{asset('vid/about_video_01.mp4')}}" class="about-video" target="_blank">
-                        <i class="play-icon fa fa-play"></i>
-                        <img src="{{asset('img/aboout_img_01.jpg')}}" alt="">
+                    <video width="520" height="400" controls>
+                        <source src="{{asset('vid/about_video_01.mp4')}}" type="video/mp4">
+                        {{--<source src="movie.ogg" type="video/ogg">--}}
+                        Your browser does not support the video tag.
+                    </video>
+                    {{--<a href="{{asset('vid/about_video_01.mp4')}}" class="about-video" target="_blank">--}}
+                        {{--<i class="play-icon fa fa-play"></i>--}}
+                        {{--<img src="{{asset('img/aboout_img_01.jpg')}}" alt="">--}}
                     </a>
                 </div>
             </div>

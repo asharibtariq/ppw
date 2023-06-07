@@ -6,6 +6,7 @@ use App\Models\Training;
 use Illuminate\Http\Request;
 use App\Http\Requests\TrainingRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class TrainingController extends Controller{
 

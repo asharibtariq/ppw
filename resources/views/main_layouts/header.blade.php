@@ -35,7 +35,7 @@
                     {{--<li><a href="#">The Context</a></li>--}}
                     {{--<li><a href="#">Vision</a></li>--}}
                     <li><a href="{{url("cci_recommendation")}}">CCI Recommendations</a></li>
-                    <li><a href="{{url("https://visualindicators.com/cciportal/login")}}" target="_blank">CCI Portal</a></li>
+                    <li><a href="{{url("https://ppwnap.gov.pk/cciportal/login")}}" target="_blank">CCI Portal</a></li>
                     <li><a href="{{url("task_force")}}">Task Force</a></li>
                     {{--<li><a href="#">Meetings FTF</a></li>--}}
                     <li><a href="{{url("national_action_plan")}}">NAP Progress</a></li>
