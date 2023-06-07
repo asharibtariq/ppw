@@ -223,7 +223,7 @@ class AjaxController extends Controller{
                 //    ->where('title', 'LIKE', '%' . $title . '%')
                 //    ->groupBy('tbl_video.id')
                     ->orderBy('tbl_video.id', 'DESC')
-                        ->paginate($per_page);
+                    ->paginate($per_page);
 
                 $data['result'] = $gallery->items();
                 $data['links'] = $gallery;

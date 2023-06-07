@@ -47,6 +47,7 @@ class VideoController extends Controller{
         $insertData['created_by'] = $userId;
         $insertData['updated_by'] = $userId;
     //    pre($request->all(),1);
+    try{
         if ($request->hasFile('video')){
             $file = $request->video;
             $extension = $file->getClientOriginalExtension();
@@ -56,6 +57,10 @@ class VideoController extends Controller{
             $file->move($destinationPath, $videoName);
             $insertData['video'] = $videoName;
         }
+    } catch(Exception $e) {
+        dd($e);
+    }
+        
         Video::create($insertData);
         return redirect('video')->with('success', 'Video Added Successfully');
     }
@@ -92,6 +97,7 @@ class VideoController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function update(VideoRequest $request, $id){
+        dd("update");
         $userId = Auth::id();
         $video = Video::findOrFail($id);
         $updateData = $request->all();

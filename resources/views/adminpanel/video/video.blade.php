@@ -55,7 +55,7 @@
                                                 <option value="50">50</option>
                                                 <option value="100">100</option>
                                                 <!--<option value="">All</option>-->
-                                            </select>  entries
+                                            </select> entries
                                         </label>
                                     </div>
                                     <br/>
@@ -71,7 +71,6 @@
             </div>
         </div>
     </div>
-
     <script>
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $(document).ready(function () {
@@ -95,7 +94,7 @@
             if (page != ''){baseurl = '{{url('/ajax_content?page=')}}'+ page;}
 
             var post_data = {
-                "_token": "{{ csrf_token() }}",
+                "_token": CSRF_TOKEN,
                 "title": $("#title").val(),
                 "select_limit": $("#select_limit").val(),
                 'action': "video_content"

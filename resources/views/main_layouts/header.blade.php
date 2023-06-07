@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <div class="navbar-brand">
                 <a class="logo" href="{{url('')}}">
-                    <img src="{{asset('img/govt_logo.png')}}" alt="logo"> <span>Population Program Wing</span>
+                    <img src="{{asset('img/logo.svg')}}" alt="logo"> <span>Population Program Wing</span>
                 </a>
             </div>
             <button class="navbar-toggle-btn">

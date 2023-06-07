@@ -20,6 +20,8 @@ Route::get('/', function () {
 */
 
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index']);
+Route::get('/index', [\App\Http\Controllers\MainPageController::class, 'index']);
+Route::get('/index.html', [\App\Http\Controllers\MainPageController::class, 'index']);
 Route::get('news_details/{id}', [\App\Http\Controllers\MainPageController::class, 'news_details']);
 Route::get('event_details/{id}', [\App\Http\Controllers\MainPageController::class, 'event_details']);
 Route::get('publication_details', [\App\Http\Controllers\MainPageController::class, 'publication_details']);
